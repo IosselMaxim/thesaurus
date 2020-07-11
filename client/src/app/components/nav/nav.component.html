@@ -1,0 +1,11 @@
+<nav class="nav">
+  <ul class="nav__menu">
+    <li class="nav__menu" *ngFor="let link of menu" routerLink="{{link.url}}" [class.disabled]="link.disabled">
+      {{link.name}}
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+
+
