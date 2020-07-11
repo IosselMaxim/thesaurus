@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "node --max_old_space_size=2048 node_modules/@angular/cli/bin/ng build --prod --build-optimizer",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall": "npm install -g @angular/cli",
+    "postinstall": "ng build --prod",
+    "bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/client/stats.json"
   },
   "private": true,
   "dependencies": {
