@@ -1,11 +1,28 @@
 <nav class="nav">
-  <ul class="nav__menu">
-    <li class="nav__menu" *ngFor="let link of menu" routerLink="{{link.url}}" [class.disabled]="link.disabled">
-      {{link.name}}
-    </li>
-  </ul>
+  <div class="container">
+    <div class="nav__logo">
+      <img src="../../assets/img/logo.png" alt="">
+    </div>
+    <ul class="nav__menu">
+      <li class="nav__menu"
+          *ngFor="let link of menu"
+          [routerLink]="[link.url]"
+          [class.disabled]="link.disabled"
+          [routerLinkActive]="['active']"
+          [class.disabled-active]="link.url === '/'"
+      >
+        {{link.name}}
+      </li>
+    </ul>
+  </div>
 </nav>
+<app-title></app-title>
 
-<router-outlet></router-outlet>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
 
 

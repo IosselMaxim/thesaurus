@@ -1,0 +1,65 @@
+$indent: 7px;
+
+@mixin box-shadow($n) {
+  box-shadow: $n 0 24px rgba(0, 0, 0, 0.15), $n 4px 23px rgba(0, 0, 0, 0.2);
+}
+
+.half {
+  position: absolute;
+  top: -150px;
+  background: #FFFFFF;
+  height: 250px;
+}
+@import "variables";
+
+
+.nav-nav {
+  width: 100%;
+  position: relative;
+
+  .title {
+    font-size: 21px;
+    font-weight: 500;
+    color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    padding-bottom: 90px;
+  }
+
+  .block-1, .block-2 {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .block-right {
+    @extend .half;
+    left: -$indent;
+    right: -$indent;
+    transform: rotate(-3deg);
+    @include box-shadow(-20px)
+  }
+
+  .block-left {
+    @extend .half;
+    right: -$indent;
+    left: -$indent;
+    transform: rotate(3deg);
+    @include box-shadow(20px)
+  }
+
+  .block-left-2 {
+    @extend .block-left;
+    box-shadow: unset;
+    z-index: 1;
+  }
+
+
+
+}

@@ -4,7 +4,7 @@ import {TrainersComponent} from './trainers/trainers.component';
 
 
 const routes: Routes = [
-  {path: '', component: TrainersComponent, data: {title: 'КОНСАЛТИНГ'}}
+  {path: '', component: TrainersComponent, data: {title: 'ТРЕНЕРЫ'}}
 ];
 
 @NgModule({
