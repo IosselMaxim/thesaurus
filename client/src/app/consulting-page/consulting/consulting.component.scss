@@ -5,11 +5,11 @@
 
   &__text {
     & > * {
-      padding-bottom: 20px;
+      padding-bottom: 25px;
     }
     &--title {
       font-size: 22px;
-      font-weight: 500;
+      font-weight: 600;
     }
     &--description {
       color: $grey-color;

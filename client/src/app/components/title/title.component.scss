@@ -1,4 +1,7 @@
+@import "mixins";
+
 $indent: 7px;
+$transform: 3deg;
 
 @mixin box-shadow($n) {
   box-shadow: $n 0 24px rgba(0, 0, 0, 0.15), $n 4px 23px rgba(0, 0, 0, 0.2);
@@ -18,12 +21,10 @@ $indent: 7px;
   position: relative;
 
   .title {
+    @include flex-center;
     font-size: 21px;
     font-weight: 500;
     color: $main-color;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     right: 0;
@@ -40,18 +41,18 @@ $indent: 7px;
 
   .block-right {
     @extend .half;
+    @include box-shadow(-20px);
     left: -$indent;
     right: -$indent;
-    transform: rotate(-3deg);
-    @include box-shadow(-20px)
+    transform: rotate(-$transform);
   }
 
   .block-left {
     @extend .half;
+    @include box-shadow(20px);
     right: -$indent;
     left: -$indent;
-    transform: rotate(3deg);
-    @include box-shadow(20px)
+    transform: rotate($transform);
   }
 
   .block-left-2 {
@@ -59,7 +60,5 @@ $indent: 7px;
     box-shadow: unset;
     z-index: 1;
   }
-
-
 
 }
