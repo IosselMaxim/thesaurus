@@ -1,5 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import {TitleService} from '../../services/title.service';
+import {TitleService} from '../../../services/title.service';
 
 @Component({
   selector: 'app-title',
@@ -9,7 +9,7 @@ import {TitleService} from '../../services/title.service';
 })
 export class TitleComponent implements OnInit {
 
-  constructor(private titleService: TitleService) { }
+  constructor(public titleService: TitleService) { }
 
   ngOnInit(): void {
   }

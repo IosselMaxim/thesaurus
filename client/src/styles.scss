@@ -6,9 +6,12 @@
 @import "mixins";
 
 
-body {
+body, html {
   font-family: Inter, serif;
   color: $main-color;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .container {

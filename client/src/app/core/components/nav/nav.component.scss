@@ -26,7 +26,7 @@
   &__menu {
     font-size: 12px;
     height: 100%;
-    color: $color-white;
+    color: $white;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -45,7 +45,7 @@
     }
 
     .disabled-active {
-      color: $color-white;
+      color: $white;
     }
   }
 }
