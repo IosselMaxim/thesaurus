@@ -1,0 +1,9 @@
+<div class="main-nav">
+  <div class="main-nav__menu">
+    <div class="buttons">
+      <button *ngFor="let link of menu | slice:1"
+              [routerLink]="link.url"
+      >{{link.name}}</button>
+    </div>
+  </div>
+</div>

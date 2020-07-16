@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {MENU} from '../../../../app-assets/constants/menu';
 
 @Component({
   selector: 'app-nav',
@@ -7,43 +8,6 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NavComponent {
-  menu = [
-    {
-      url: '/',
-      name: 'ГЛАВНАЯ',
-      exact: false,
-      disabled: false
-    },
-    {
-      url: '/company',
-      name: 'О КОМПАНИИ',
-      exact: false,
-      disabled: false
-    },
-    {
-      url: '/trainings',
-      name: 'ВСЕ ТРЕНИНГИ',
-      exact: false,
-      disabled: false
-    },
-    {
-      url: '/trainers',
-      name: 'ТРЕНЕРЫ',
-      exact: false,
-      disabled: false
-    },
-    {
-      url: '/consulting',
-      name: 'КОНСАЛТИНГ',
-      exact: false,
-      disabled: false
-    },
-    {
-      url: '/contact',
-      name: 'КОНТАКТЫ',
-      exact: false,
-      disabled: false
-    },
-  ];
+  menu = MENU;
 
 }
