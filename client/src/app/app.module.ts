@@ -6,7 +6,7 @@ import {AppComponent} from './app.component';
 import {NavComponent} from './core/components/nav/nav.component';
 import {SharedModule} from './shared/shared.module';
 import {TitleService} from './services/title.service';
-import { FooterComponent } from './footer/footer.component';
+import {FooterComponent} from './footer/footer.component';
 
 @NgModule({
   declarations: [

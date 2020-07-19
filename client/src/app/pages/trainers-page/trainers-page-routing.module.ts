@@ -4,7 +4,11 @@ import {TrainersComponent} from './trainers/trainers.component';
 
 
 const routes: Routes = [
-  {path: '', component: TrainersComponent, data: {title: 'ТРЕНЕРЫ'}}
+  {path: '', component: TrainersComponent, data: {title: 'ТРЕНЕРЫ'}},
+  {
+    path: ':id',
+    loadChildren: () => import('../trainer-page/trainer-page.module').then(m => m.TrainerPageModule)
+  },
 ];
 
 @NgModule({
