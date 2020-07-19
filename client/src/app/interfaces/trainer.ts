@@ -1,4 +1,7 @@
 export interface Trainer {
+  _id: string;
+  img: string;
+  isMan: boolean;
   name: {
     firstName: string;
     lastName: string;
@@ -10,7 +13,7 @@ export interface Trainer {
   experienceDetail: {
     trainingsSum: number;
     studentsSum: number;
-    Hours: number;
+    hours: number;
   };
   skills: string[];
   text: string[];

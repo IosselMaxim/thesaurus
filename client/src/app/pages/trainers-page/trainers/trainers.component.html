@@ -1,113 +1,38 @@
 <div class="main">
   <div class="trainers">
 
-    <div class="d-flex trainer">
+    <div class="d-flex trainer " *ngFor="let trainer of trainers">
 
       <div class="img col-5">
-        <img src="../../../../assets/img/main/trainers/solovova.png" alt="">
+        <img src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
       </div>
-
       <div class="info col-7">
 
-        <div class="name">
-          Светлана Соловова
+        <div class="name" [routerLink]="'/trainers/' + trainer?._id">
+          {{trainer?.name?.firstName}} {{trainer?.name?.lastName}}
         </div>
-        <div class="experience">Опыт проведения тренингов 15 лет</div>
+        <div class="experience">Опыт проведения тренингов {{trainer?.experience}} лет</div>
         <div class="expertise">
-          <p>Сертифицированный бизнес-тренер</p>
-          <p>Эксперт в области управления персоналом, построения системы обучения и развития персонала в организации</p>
+          <p>{{trainer?.grade}}</p>
+          <p>{{trainer?.expertise}}</p>
         </div>
 
         <div class="experienceDetail">
           <p>
             <img src="../../../../assets/img/main/trainers/icons/1-orange.png" alt="">
-            <span>Провела более 700 различных тренингов</span>
+            <span>Провел{{ trainer?.isMan ? '' : 'а'}} более {{trainer?.experienceDetail?.trainingsSum}} различных тренингов</span>
           </p>
           <p>
             <img src="../../../../assets/img/main/trainers/icons/2-orange.png" alt="">
-            <span>Обучила на тренингах более 5 000 человек</span>
+            <span>Обучил{{ trainer?.isMan ? '' : 'а'}} на тренингах более {{trainer?.experienceDetail?.studentsSum}} человек</span>
           </p>
           <p>
             <img src="../../../../assets/img/main/trainers/icons/3-orange.png" alt="">
-            <span>Отработала более 8 000 тренинговых часов</span>
+            <span>Отработал{{ trainer?.isMan ? '' : 'а'}} более {{trainer?.experienceDetail?.hours}} тренинговых часов</span>
           </p>
         </div>
         <div class="more">
-          <button>Подробнее о тренере</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="d-flex trainer">
-
-      <div class="img col-5">
-        <img src="../../../../assets/img/main/trainers/chugunov.png" alt="">
-      </div>
-
-      <div class="info col-7">
-
-        <div class="name">
-          Вадим Чугунов
-        </div>
-        <div class="experience">Опыт проведения тренингов 11 лет</div>
-        <div class="expertise">
-          <p>Сертифицированный бизнес-тренер</p>
-          <p>Эксперт в области разработки тренинговых программ и решения бизнес-задач через обучение</p>
-        </div>
-
-        <div class="experienceDetail">
-          <p>
-            <img src="../../../../assets/img/main/trainers/icons/1-orange.png" alt="">
-            <span>Провел более 700 различных тренингов</span>
-          </p>
-          <p>
-            <img src="../../../../assets/img/main/trainers/icons/2-orange.png" alt="">
-            <span>Обучил на тренингах более 5 000 человек</span>
-          </p>
-          <p>
-            <img src="../../../../assets/img/main/trainers/icons/3-orange.png" alt="">
-            <span>Отработал более 8 000 тренинговых часов</span>
-          </p>
-        </div>
-        <div class="more">
-          <button>Подробнее о тренере</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="d-flex trainer">
-
-      <div class="img col-5">
-        <img src="../../../../assets/img/main/trainers/modin.png" alt="">
-      </div>
-
-      <div class="info col-7">
-
-        <div class="name">
-          Дмитрий Модин
-        </div>
-        <div class="experience">Опыт проведения тренингов 10 лет</div>
-        <div class="expertise">
-          <p>Сертифицированный бизнес-тренер</p>
-          <p>Эксперт в области управления персоналом, построения системы обучения и развития персонала в организации</p>
-        </div>
-
-        <div class="experienceDetail">
-          <p>
-            <img src="../../../../assets/img/main/trainers/icons/1-orange.png" alt="">
-            <span>Провела более 700 различных тренингов</span>
-          </p>
-          <p>
-            <img src="../../../../assets/img/main/trainers/icons/2-orange.png" alt="">
-            <span>Обучила на тренингах более 5 000 человек</span>
-          </p>
-          <p>
-            <img src="../../../../assets/img/main/trainers/icons/3-orange.png" alt="">
-            <span>Отработала более 8 000 тренинговых часов</span>
-          </p>
-        </div>
-        <div class="more">
-          <button>Подробнее о тренере</button>
+          <button [routerLink]="'/trainers/' + trainer?._id">Подробнее о тренере</button>
         </div>
       </div>
     </div>

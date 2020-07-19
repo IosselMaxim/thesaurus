@@ -1,4 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import {Component, OnInit, ChangeDetectionStrategy} from '@angular/core';
+import {TRAINERS} from '../../../constants/trainers';
 
 @Component({
   selector: 'app-trainers',
@@ -7,8 +8,10 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TrainersComponent implements OnInit {
+  trainers = TRAINERS;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
