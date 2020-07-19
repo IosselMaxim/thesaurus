@@ -1,0 +1,77 @@
+@import "mixins";
+@import "variables";
+
+.main {
+  margin: 50px 0;
+  .title {
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 16px;
+    color: $gray;
+  }
+
+  .sub-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .training-audience {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 20px;
+    color: $gray;
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 20px;
+  }
+
+  .preview {
+    margin-top: 20px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .action {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .text-item {
+      padding: 10px 0 0 30px;
+    }
+
+    .buttons {
+      margin-top: 10px;
+
+      .button-cost {
+        @include button(170px, 23px, $gray, 12px, 9px);
+        margin: 5px 10px;
+      }
+
+      .button-request {
+        @include button(170px, 23px, $black, 12px, 9px, 500, $orange);
+        margin: 5px 10px;
+        border-color: $orange;
+      }
+    }
+  }
+
+
+}

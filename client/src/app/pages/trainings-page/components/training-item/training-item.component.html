@@ -1,0 +1,36 @@
+<div class="main d-flex">
+  <div class="col-3">
+    <img src="../../../../assets/img/pages-img/trainings/{{training?.img}}.png" alt="">
+  </div>
+
+  <div class="col-6">
+    <div class="title">{{training?.title}}</div>
+    <div class="sub-title">{{training?.subTitle}}</div>
+    <div class="audience">
+      <div class="training-audience">
+        Аудитория тренинга
+      </div>
+      <div class="description">
+        <p *ngFor="let des of training?.description">{{des}}</p>
+      </div>
+    </div>
+    <div class="preview">
+      <p *ngFor="let p of training?.preview">{{ p }}</p>
+
+    </div>
+  </div>
+
+  <div class="col-3 action">
+    <img src="../../../../assets/img/pages-img/trainings/{{training?.audience?.img}}.png" alt="">
+    <div class="text-item">{{training?.audience.text}}</div>
+    <div class="text-item">{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</div>
+    <div class="text-item" *ngIf="training?.cost?.company">Для Компаний</div>
+    <div class="text-item" *ngIf="training?.cost?.people">Для частных лиц</div>
+    <div class="text-item">Читать подробнее</div>
+    <div class="buttons">
+      <button class="button-cost">Узнать стоимость</button>
+      <button class="button-request">ПОДАТЬ ЗАЯВКУ</button>
+    </div>
+
+  </div>
+</div>

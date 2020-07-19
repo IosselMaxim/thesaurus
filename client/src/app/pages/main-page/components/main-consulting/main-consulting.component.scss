@@ -1,0 +1,67 @@
+@import "variables";
+@import "mixins";
+
+.main {
+  @include main;
+  margin-bottom: 50px;
+  p {
+    @include p;
+
+  }
+;
+
+  .title {
+    @include title;
+  }
+
+  .content {
+    padding: 30px 0;
+
+    .img {
+      @include flex-center;
+      padding-left: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .header {
+      @include flex-center;
+    }
+
+    .left-container {
+      p {
+        padding: 10px 50px;
+        margin-left: 15px;
+        border-left: 2px solid $main-color;
+        line-height: 23px;
+      }
+    }
+
+    .right-container {
+      .item {
+        @include flex-center;
+        img {
+          width: 27px;
+          height: 27px;
+          margin-right: 20px;
+        }
+        p {
+          font-size: 13px;
+          line-height: 21px;
+          padding: 10px 0;
+        }
+      }
+
+    }
+  }
+
+  .action {
+    @include flex-center;
+    padding: 15px;
+    button {
+      @include button(230px, 23px, $gray, 12px, 9px, 500, none);
+    }
+  }
+}

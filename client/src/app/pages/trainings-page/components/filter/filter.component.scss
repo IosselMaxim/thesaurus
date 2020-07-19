@@ -1,0 +1,39 @@
+@import "mixins";
+@import "variables";
+
+
+.main {
+  button {
+    position: relative;
+    @include button(auto, 23px, $gray, 12px, 9px, 500, none);
+    min-width: 124px;
+    margin: 0 10px;
+  }
+
+  .button-icon {
+    padding-left: 48px;
+    padding-right: 12px;
+    img {
+      position: absolute;
+      left: 10px;
+      top: -10px;
+      background: $white;
+    }
+  }
+
+  & > div {
+    padding: 15px 0;
+  }
+
+  & > div > div {
+    @include flex-center;
+  }
+
+  span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+  }
+}

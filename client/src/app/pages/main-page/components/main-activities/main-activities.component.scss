@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixins";
+
+.main {
+  @include main;
+  padding-bottom: 60px;
+  .title {
+    @include title;
+  }
+  .activities {
+    text-align: center;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px 0;
+  }
+  .trainings {
+    .managers, .b2b, .b2c {
+      padding: 15px 0;
+      .training {
+        display: flex;
+        align-items: center;
+      }
+      .img {
+        @include flex-center;
+        .ellipse {
+          @include flex-center;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+          width: 101px;
+          height: 101px;
+          border-radius: 50%;
+        }
+      }
+      .description {
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+}

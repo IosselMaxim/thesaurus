@@ -1,4 +1,6 @@
-@mixin button ($w, $h, $c, $br, $fz, $fw, $bg) {
+@import "variables";
+
+@mixin button ($w, $h, $c, $br, $fz, $fw: 500, $bg: $white) {
   width: $w;
   height: $h;
   border: 1px solid $c;

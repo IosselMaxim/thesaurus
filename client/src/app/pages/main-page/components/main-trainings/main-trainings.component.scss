@@ -1,0 +1,51 @@
+@import "variables";
+
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1106px;
+  padding: 50px 0 0 0;
+
+  .trainings {
+    .item {
+      .title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 0.07em;
+        color: $main-color;
+        width: 100%;
+        padding: 20px 30px;
+      }
+      .img {
+        padding: 0 0 20px 0;
+        img {
+          width: 100%;
+        }
+      }
+      .trainings-list {
+        .training-text {
+          text-align: left;
+          font-style: normal;
+          font-size: 16px;
+          line-height: 30px;
+          color: $gray;
+        }
+        .training-name {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 30px;
+          padding-bottom: 30px;;
+        }
+        .link {}
+      }
+    }
+
+  }
+}
+
+

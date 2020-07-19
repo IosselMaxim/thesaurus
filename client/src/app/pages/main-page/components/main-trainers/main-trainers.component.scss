@@ -1,0 +1,106 @@
+@import "mixins";
+@import "variables";
+
+.main {
+  padding: 50px 0;
+  color: $white;
+  background: rgb(23, 55, 94);
+  background: linear-gradient(0deg, rgba(23, 55, 94, 1) 0%, rgba(29, 68, 116, 1) 50%, rgba(23, 55, 94, 1) 100%);
+
+  .title {
+    text-align: center;
+  }
+
+  .trainers {
+    @include main;
+
+    .img {
+      text-align: left;
+      display: flex;
+      justify-content: flex-start;
+
+      img {
+        width: 100%;
+      }
+    }
+
+
+    .name {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      font-style: normal;
+      font-weight: 200;
+      font-size: 20px;
+      line-height: 30px;
+      padding-bottom: 20px;
+
+      hr {
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 100%;
+        border-top: 2px solid $orange;
+        margin: 0;
+      }
+    }
+
+    .expertise {
+      font-style: normal;
+      font-weight: 200;
+      font-size: 13px;
+      line-height: 20px;
+      padding: 15px;
+      p {
+        padding-bottom: 10px;
+      }
+    }
+
+
+    .experience {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 16px;
+      padding: 0 15px;
+    }
+
+    .experienceDetail {
+      padding: 0 0 0 15px ;
+      p {
+        padding: 15px 0;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 20px;
+
+        span {
+          padding-left: 10px;
+        }
+
+        img {
+          height: 28px;
+          width: 28px;
+        }
+      }
+    }
+
+    .more {
+      padding: 15px;
+      button {
+        @include button(193px, 23px, $orange, 12px, 9px, 500, none);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+      }
+    }
+  }
+
+
+
+
+}

@@ -1,64 +1,22 @@
 @import "mixins";
 
-$indent: 9px;
-$transform: 3deg;
-
-@mixin box-shadow($n) {
-  box-shadow: $n 0 24px rgba(0, 0, 0, 0.15), $n 4px 23px rgba(0, 0, 0, 0.2);
-}
-
-.half {
-  position: absolute;
-  top: -150px;
-  background: #FFFFFF;
-  height: 250px;
-}
-@import "variables";
-
-
 .nav-nav {
-  width: 100%;
   position: relative;
+  height: 17vh;
 
   .title {
     @include flex-center;
-    font-size: 21px;
-    font-weight: 500;
-    color: $main-color;
     position: absolute;
+    height: 14vh;
+    padding-bottom: 3vh;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
-    z-index: 2;
-    padding-bottom: 90px;
+    right: 0;
+    background-image: url(/assets/img/pages-img/title-background.svg);
+    background-color: unset;
+    background-size: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
   }
-
-  .block-1, .block-2 {
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .block-right {
-    @extend .half;
-    @include box-shadow(-20px);
-    left: -$indent;
-    right: -$indent;
-    transform: rotate(-$transform);
-  }
-
-  .block-left {
-    @extend .half;
-    @include box-shadow(20px);
-    right: -$indent;
-    left: -$indent;
-    transform: rotate($transform);
-  }
-
-  .block-left-2 {
-    @extend .block-left;
-    box-shadow: unset;
-    z-index: 1;
-  }
-
 }
+
