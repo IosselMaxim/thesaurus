@@ -1,10 +1,11 @@
 export interface Training {
+  _id: string;
   img: string;
   title: string; // Тренинг
   subTitle: string; // "Как начать спать по ночам"
   audience: {
     text: string;
-    img: 'management' | 'b2b' | 'b2c' | 't&d';
+    img: 'management' | 'b2b' | 'b2c' | 't&d' | any;
   };
   description: string[];
   preview: string[];

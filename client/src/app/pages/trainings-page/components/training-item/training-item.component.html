@@ -5,7 +5,7 @@
 
   <div class="col-6">
     <div class="title">{{training?.title}}</div>
-    <div class="sub-title">{{training?.subTitle}}</div>
+    <div class="sub-title" [routerLink]="'/trainings/' + training?._id">{{training?.subTitle}}</div>
     <div class="audience">
       <div class="training-audience">
         Аудитория тренинга

@@ -4,7 +4,11 @@ import {TrainingsComponent} from './trainings/trainings.component';
 
 
 const routes: Routes = [
-  {path: '', component: TrainingsComponent, data: {title: 'КАТАЛОГ ТРЕНИНГОВ'}}
+  {path: '', component: TrainingsComponent, data: {title: 'КАТАЛОГ ТРЕНИНГОВ'}},
+  {
+    path: ':id',
+    loadChildren: () => import('../training-page/training-page.module').then(m => m.TrainingPageModule)
+  },
 ];
 
 @NgModule({

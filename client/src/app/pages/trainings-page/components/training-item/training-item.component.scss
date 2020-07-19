@@ -16,6 +16,11 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 30px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   .training-audience {
