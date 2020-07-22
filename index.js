@@ -1,6 +1,6 @@
 const {app, path, express, mongoose, config} = require('./app');
 
-const PORT = config.get('port') || 5000;
+const PORT = 8001;
 const MONGO_URI = config.get('mongoUri');
 const STATIC_FOLDER = path.join(__dirname, 'client', 'dist', 'client');
 const INDEX_HTML = path.resolve(__dirname, 'client', 'dist', 'client', 'index.html');
