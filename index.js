@@ -1,6 +1,6 @@
 const {app, path, express, mongoose, config} = require('./app');
 
-const PORT = 8001;
+const PORT = 8888;
 const MONGO_URI = config.get('mongoUri');
 const STATIC_FOLDER = path.join(__dirname, 'client', 'dist', 'client');
 const INDEX_HTML = path.resolve(__dirname, 'client', 'dist', 'client', 'index.html');
@@ -22,7 +22,7 @@ async function start() {
 			useCreateIndex: true
 
 		});
-		app.listen(PORT, () => console.log(`--> App has been STARTED on port ${PORT}...`));
+		app.listen(PORT, () => console.log(`--> App has been STARTED on port ${PORT}... 'THESAURUS'`));
 	} catch (e) {
 		console.log('Server error: ', 'Ошибка сервера');
 		process.exit(1);
