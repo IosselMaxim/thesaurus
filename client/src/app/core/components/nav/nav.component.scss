@@ -10,7 +10,17 @@
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-between
+    justify-content: space-between;
+
+    .menu {
+      cursor: pointer;
+      align-items: center;
+      color: white;
+      .sandwich {
+        justify-content: center;
+      }
+    }
+
   }
 
   &__logo {
@@ -27,7 +37,6 @@
     font-size: 12px;
     height: 100%;
     color: $white;
-    display: flex;
     justify-content: space-around;
     align-items: center;
 
@@ -48,4 +57,23 @@
       color: $white;
     }
   }
+}
+
+
+.example-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.mat-drawer-container {
+  background: #ffffff;
 }

@@ -1,5 +1,9 @@
 @import "mixins";
 
 .company {
+  color: $main-color;
   @include simple-page(0);
+  hr {
+    border-top: 4px solid #17375E;
+  }
 }

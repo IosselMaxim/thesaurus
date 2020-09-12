@@ -1,28 +1,60 @@
-<nav class="nav">
-  <div class="container">
-    <div class="nav__logo">
-      <img src="../../../../assets/img/logo.png" alt="">
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+
+    <mat-nav-list>
+      <div>
+        <a mat-list-item
+           *ngFor="let link of menu"
+           [routerLink]="[link.url]" [routerLinkActive]="['active']"
+           (click)="drawer.toggle()"
+        >
+          {{link.name}}
+        </a>
+      </div>
+
+    </mat-nav-list>
+
+
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+
+    <nav class="nav">
+      <div class="container">
+        <div class="nav__logo">
+          <img src="../../../../assets/img/logo.png" alt="">
+        </div>
+
+
+        <ul class="nav__menu d-md-flex d-none">
+          <li class="nav__menu"
+              *ngFor="let link of menu"
+              [routerLink]="[link.url]"
+              [class.disabled]="link.disabled"
+              [routerLinkActive]="['active']"
+              [class.disabled-active]="link.url === '/'"
+          >
+            {{link.name}}
+          </li>
+        </ul>
+
+        <div class="menu d-md-none d-flex" (click)="drawer.toggle()">
+          Меню
+          <button mat-icon-button class="sandwich">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+
+
+      </div>
+    </nav>
+    <app-title></app-title>
+
+
+    <div class="container">
+      <router-outlet></router-outlet>
     </div>
-    <ul class="nav__menu">
-      <li class="nav__menu"
-          *ngFor="let link of menu"
-          [routerLink]="[link.url]"
-          [class.disabled]="link.disabled"
-          [routerLinkActive]="['active']"
-          [class.disabled-active]="link.url === '/'"
-      >
-        {{link.name}}
-      </li>
-    </ul>
   </div>
-</nav>
-<app-title></app-title>
 
-
-<div class="container">
-  <router-outlet></router-outlet>
-</div>
-
-
-
-
+</mat-drawer-container>

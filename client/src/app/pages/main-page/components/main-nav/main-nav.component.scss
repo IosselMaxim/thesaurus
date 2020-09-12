@@ -7,7 +7,7 @@
     min-width: 100%;
     width: $max-width-container;
     height: $height-main-nav;
-    background-image: url('~/assets/img/main/main-nav-background.png'); /* Путь к фоновому изображению */
+    background-image: url('../../../../../assets/img/main/main-nav-background.png'); /* Путь к фоновому изображению */
     background-color: #35281b; /* Цвет фона */
     background-position: left top;
     background-repeat: no-repeat;
@@ -20,7 +20,7 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: url('~/assets/img/main/white-triangle.svg'); /* Путь к фоновому изображению */
+      background-image: url('../../../../../assets/img/main/white-triangle.svg'); /* Путь к фоновому изображению */
       background-repeat: no-repeat;
     }
 
@@ -31,7 +31,7 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: url('~/assets/img/main/blue-triangle.svg'); /* Путь к фоновому изображению */
+      background-image: url('../../../../../assets/img/main/blue-triangle.svg'); /* Путь к фоновому изображению */
       background-repeat: no-repeat;
     }
 
@@ -42,7 +42,7 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-image: url('~/assets/img/main/logo-main-page.svg'); /* Путь к фоновому изображению */
+      background-image: url('../../../../../assets/img/main/logo-main-page.svg'); /* Путь к фоновому изображению */
       background-repeat: no-repeat;
     }
 
