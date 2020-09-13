@@ -39,7 +39,12 @@
           font-weight: 700;
           font-size: 18px;
           line-height: 30px;
-          padding-bottom: 30px;;
+          padding-bottom: 30px;
+
+          a {
+            color: $main-color;
+            text-decoration-color: $main-color;
+          }
         }
         .link {}
       }

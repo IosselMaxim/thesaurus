@@ -1,5 +1,6 @@
 @import "mixins";
 @import "variables";
+@import "~bootstrap";
 
 .main {
   margin-top: 50px;
@@ -10,88 +11,135 @@
   }
 
   .trainer {
+    @extend .d-flex;
+    @extend .flex-sm-row;
+    @extend .flex-column;
     margin-bottom: 80px;
     padding-bottom: 30px;
-    border-bottom: 1px solid $main-color;;
-  }
+    border-bottom: 1px solid $main-color;
 
-  .img {
-    img {
-      width: 100%;
-      padding: 0 30px 0 0;
-    }
-  }
-  .name {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    padding-bottom: 20px;
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
-  }
-
-  .expertise {
-    font-style: normal;
-    font-weight: 200;
-    font-size: 13px;
-    line-height: 20px;
-    p {
-      padding-bottom: 10px;
-    }
-  }
-
-
-  .experience {
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-  }
-
-  .experienceDetail {
-    p {
-      padding: 15px 0;
-      display: flex;
-      align-items: center;
-      font-style: normal;
-      font-weight: 200;
-      font-size: 13px;
-      line-height: 20px;
-
-      span {
-        padding-left: 10px;
-      }
+    &__img {
+      @extend .m-auto;
+      @extend .col-8;
+      @extend .col-sm-5;
 
       img {
-        height: 28px;
-        width: 28px;
+        @extend .p-0;
+        @extend .mb-3;
+        @extend .pr-sm-3;
+        @extend .w-100;
       }
     }
+
+
+    &__info {
+      @extend .col-sm-7;
+      @extend .col-12;
+
+      .name {
+        @extend .justify-content-center;
+        @extend .justify-content-sm-start;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 20px;
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      .line {
+        width: 80%;
+        height: 2px;
+        background: $main-color;
+        @extend .mx-auto;
+        @extend .mb-4;
+        @extend .d-sm-none;
+      }
+
+
+      hr {
+        border-bottom: 4px solid $main-color;
+      }
+
+      .expertise {
+        font-style: normal;
+        font-weight: 200;
+        font-size: 13px;
+        line-height: 20px;
+        p {
+          padding-bottom: 10px;
+        }
+      }
+
+
+      .experience {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 16px;
+      }
+
+      .experience-detail {
+        @extend .d-none;
+        @extend .d-sm-block;
+        p {
+          padding: 15px 0;
+          display: flex;
+          align-items: center;
+          font-style: normal;
+          font-weight: 200;
+          font-size: 13px;
+          line-height: 20px;
+
+          span {
+            padding-left: 10px;
+          }
+
+          img {
+            height: 28px;
+            width: 28px;
+          }
+
+        }
+      }
+      .more {
+        padding: 15px;
+        @extend .text-center;
+        @extend .text-sm-center;
+
+        button {
+          @include button(193px, 23px, $gray, 12px, 9px, 500, none);
+          font-style: normal;
+          font-weight: 500;
+          font-size: 11px;
+          line-height: 13px;
+          text-align: center;
+          transition: 0.2s;
+          &:hover {
+            transition: 0.2s;
+            background: #f4bb4a6b;
+          }
+        }
+      }
+    }
+
+
   }
+
+
+
+
+
+
 
   .info, .img {
     padding: 0;
   }
 
-  .more {
-    padding: 15px;
-    button {
-      @include button(193px, 23px, $gray, 12px, 9px, 500, none);
-      font-style: normal;
-      font-weight: 500;
-      font-size: 11px;
-      line-height: 13px;
-      text-align: center;
-      transition: 0.2s;
-      &:hover {
-        transition: 0.2s;
-        background: #f4bb4a6b;
-      }
-    }
-  }
+
 
 }

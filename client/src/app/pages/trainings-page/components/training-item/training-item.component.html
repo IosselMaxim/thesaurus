@@ -28,7 +28,7 @@
     <div class="text-item" *ngIf="training?.cost?.people">Для частных лиц</div>
     <div class="text-item">Читать подробнее</div>
     <div class="buttons">
-      <button class="button-cost">Узнать стоимость</button>
+      <button class="button-cost" [routerLink]="'/trainings/' + training?._id">Узнать подробнее</button>
       <button class="button-request">ПОДАТЬ ЗАЯВКУ</button>
     </div>
 

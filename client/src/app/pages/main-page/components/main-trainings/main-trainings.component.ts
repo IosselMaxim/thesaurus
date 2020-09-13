@@ -1,4 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import {TRAININGS} from '../../../../constants/trainings';
+import {Training} from '../../../../interfaces/training';
 
 @Component({
   selector: 'app-main-trainings',
@@ -7,44 +9,29 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainTrainingsComponent {
+  // tslint:disable-next-line:variable-name
+  _trainings: Training[] = TRAININGS;
 
   trainings = [
     {
       title: 'ТРЕНИНГИ ДЛЯ РУКОВОДИТЕЛЕЙ',
       img: 'managers',
-      trainingsList: [
-        {
-          name: '«Основные управленческие навыки»'
-        },
-        {
-          name: '«Стратегическое управленческое решение»'
-        }
-      ]
+      trainingsList: this.getTrainings('manager')
     },
     {
       title: 'ТРЕНИНГИ ДЛЯ СЕГМЕНТА B2B',
       img: 'b2b',
-      trainingsList: [
-        {
-          name: '«Активный поиск клиентов по телефону»'
-        },
-        {
-          name: '«Технологии ведения деловых переговоров»'
-        }
-      ]
+      trainingsList: this.getTrainings('b2b')
     },
     {
       title: 'ТРЕНИНГИ ДЛЯ СЕГМЕНТА B2C',
       img: 'b2c',
-      trainingsList: [
-        {
-          name: '«Технологии продаж в торговом зале»'
-        },
-        {
-          name: '«Как сделать сервис клиентоориентированным»'
-        }
-      ]
+      trainingsList: this.getTrainings('b2c')
     },
   ];
+
+  getTrainings(direct: string) {
+    return this._trainings.filter(t => t.audience.img === direct).slice(0, 2);
+  }
 
 }

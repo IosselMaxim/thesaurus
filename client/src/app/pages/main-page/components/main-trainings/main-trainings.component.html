@@ -8,7 +8,7 @@
       </div>
       <div class="trainings-list" *ngFor="let tr of i.trainingsList">
         <div class="training-text">Тренинг</div>
-        <div class="training-name">{{tr.name}}</div>
+        <div class="training-name"><a [routerLink]="'/trainings/' + tr._id">{{tr.subTitle}}</a></div>
         <div class="link"></div>
       </div>
     </div>

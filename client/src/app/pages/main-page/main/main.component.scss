@@ -17,7 +17,6 @@
     }
 
     text-align: center;
-    text-decoration-line: underline;
     @include flex-center;
     position: relative;
     height: 14vh;
@@ -35,6 +34,10 @@
     @include button(189px, 37px, $main-color, 7px, 11px, 500, $orange);
     border-color: $orange;
     margin-bottom: 70px;
+  }
+
+  a {
+    text-decoration-color: $gray;
   }
 }
 

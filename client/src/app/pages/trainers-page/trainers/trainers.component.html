@@ -1,23 +1,27 @@
 <div class="main">
   <div class="trainers">
 
-    <div class="d-flex trainer " *ngFor="let trainer of trainers">
+    <div class="trainer " *ngFor="let trainer of trainers">
 
-      <div class="img col-5">
+      <div class="trainer__img">
         <img src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
       </div>
-      <div class="info col-7">
+
+
+      <div class="trainer__info">
 
         <div class="name" [routerLink]="'/trainers/' + trainer?._id">
           {{trainer?.name?.firstName}} {{trainer?.name?.lastName}}
         </div>
+
+        <div class="line"></div>
         <div class="experience">Опыт проведения тренингов {{trainer?.experience}} лет</div>
         <div class="expertise">
           <p>{{trainer?.grade}}</p>
           <p>{{trainer?.expertise}}</p>
         </div>
 
-        <div class="experienceDetail">
+        <div class="experience-detail">
           <p>
             <img src="../../../../assets/img/main/trainers/icons/1-orange.png" alt="">
             <span>Провел{{ trainer?.isMan ? '' : 'а'}} более {{trainer?.experienceDetail?.trainingsSum}} различных тренингов</span>
