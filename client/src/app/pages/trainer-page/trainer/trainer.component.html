@@ -1,22 +1,24 @@
-
-
-<div class="main">
+<div class="main p-2">
   <div class="back d-flex justify-content-start align-items-center" routerLink="/trainers">
     <img src="../../../../assets/img/icon/arrow-left.png" alt="">
     <span>Назад к списку тренеров</span>
   </div>
   <div class="trainers">
 
-    <div class="d-flex trainer">
+    <div class="trainer d-flex flex-column flex-sm-row">
 
-      <div class="img col-4">
-        <img src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
+      <div class="img col-sm-4 col-8 mx-auto mb-4">
+        <img class="p-0 pr-sm-5" src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
       </div>
-      <div class="info col-8">
 
-        <div class="name" [routerLink]="'/trainers/' + trainer?._id">
+      <div class="info col-sm-8">
+
+        <div class="name text-sm-left text-center" [routerLink]="'/trainers/' + trainer?._id">
           {{trainer?.name?.firstName}} {{trainer?.name?.lastName}}
         </div>
+
+        <div class="line mx-auto mb-4 d-sm-none"></div>
+
         <div class="experience">Опыт проведения тренингов {{trainer?.experience}} лет</div>
         <div class="expertise">
           <p>{{trainer?.grade}}</p>

@@ -16,11 +16,10 @@
 
     .img {
       text-align: left;
-      display: flex;
-      justify-content: flex-start;
 
       img {
         width: 100%;
+        height: auto;
       }
     }
 
@@ -38,10 +37,15 @@
       hr {
         position: absolute;
         bottom: 0;
-        left: 10%;
-        width: 100%;
+        left: 0;
+        width: 75%;
         border-top: 2px solid $orange;
         margin: 0;
+
+        @media screen and (max-width: 992px){
+          left: 12.5%;
+          right: 12.5%;
+        }
       }
     }
 
@@ -81,7 +85,7 @@
         }
 
         img {
-          height: 28px;
+          height: auto;
           width: 28px;
         }
       }

@@ -4,11 +4,11 @@ import {NavComponent} from './core/components/nav/nav.component';
 
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./pages/development-page/development-page.module').then(m => m.DevelopmentPageModule)
+  // }
   {
-    path: '',
-    loadChildren: () => import('./pages/development-page/development-page.module').then(m => m.DevelopmentPageModule)
-  }
-  /*{
     path: '',
     loadChildren: () => import('./pages/main-page/main-page.module').then(m => m.MainPageModule)
   },
@@ -35,7 +35,7 @@ const routes: Routes = [
         loadChildren: () => import('./pages/trainers-page/trainers-page.module').then(m => m.TrainersPageModule)
       },
     ]
-  },*/
+  },
 ];
 
 @NgModule({

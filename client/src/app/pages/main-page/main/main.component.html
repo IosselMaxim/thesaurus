@@ -1,23 +1,72 @@
-<app-main-nav></app-main-nav>
-<app-main-trainings></app-main-trainings>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="over">
 
-<div class="nav-nav d-flex">
-  <div class="title">
-    <a routerLink="/trainings"><span>Все тренинги</span></a>
+    <mat-nav-list>
+      <div>
+        <a mat-list-item
+           *ngFor="let link of menu"
+           [routerLink]="[link.url]" [routerLinkActive]="['active']"
+           (click)="drawer.toggle()"
+        >
+          {{link.name}}
+        </a>
+      </div>
+
+    </mat-nav-list>
+
+
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+
+    <nav class="nav d-md-none d-flex">
+      <div class="container d-flex justify-content-end">
+
+        <div class="menu" (click)="drawer.toggle()">
+          Меню
+          <button mat-icon-button class="sandwich">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+
+
+      </div>
+    </nav>
+
+
+    <app-main-nav></app-main-nav>
+    <app-main-trainings></app-main-trainings>
+
+    <div class="nav-nav d-flex">
+      <div class="title">
+        <a routerLink="/trainings"><span>Все тренинги</span></a>
+      </div>
+    </div>
+
+    <app-main-more></app-main-more>
+    <app-main-clients></app-main-clients>
+    <app-main-trainers></app-main-trainers>
+    <app-main-activities></app-main-activities>
+
+
+    <div class="nav-nav d-flex">
+      <div class="title">
+        <button routerLink="/trainings">Каталог товаров</button>
+      </div>
+    </div>
+
+
+    <app-main-consulting></app-main-consulting>
+
   </div>
-</div>
+  <app-footer></app-footer>
 
-<app-main-more></app-main-more>
-<app-main-clients></app-main-clients>
-<app-main-trainers></app-main-trainers>
-<app-main-activities></app-main-activities>
+</mat-drawer-container>
 
 
-<div class="nav-nav d-flex">
-  <div class="title">
-    <button routerLink="/trainings">Каталог товаров</button>
-  </div>
-</div>
 
 
-<app-main-consulting></app-main-consulting>
+
+
+<!------------------------------------------------------------------------------------->
+

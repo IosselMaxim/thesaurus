@@ -41,3 +41,38 @@
   }
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $height-nav;
+  background: $background-color-nav;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      cursor: pointer;
+      align-items: center;
+      color: white;
+
+      .sandwich {
+        justify-content: center;
+      }
+    }
+
+  }
+
+}
+
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.mat-drawer-container {
+  background: #ffffff;
+}
+

@@ -1,12 +1,12 @@
 <div class="main container">
 
-  <div class="trainings d-flex">
-    <div class="item col-4" *ngFor="let i of trainings">
+  <div class="trainings d-flex flex-column flex-md-row">
+    <div class="item col-12 col-md-4" *ngFor="let i of trainings">
       <div class="title">{{i.title}}</div>
       <div class="img">
-        <img src="../../../../assets/img/main/{{i.img}}.png" alt="">
+        <img class="m-auto col-12 col-sm-8 col-md-12" src="../../../../assets/img/main/{{i.img}}.png" alt="">
       </div>
-      <div class="trainings-list" *ngFor="let tr of i.trainingsList">
+      <div class="trainings-list d-none d-md-block" *ngFor="let tr of i.trainingsList">
         <div class="training-text">Тренинг</div>
         <div class="training-name"><a [routerLink]="'/trainings/' + tr._id">{{tr.subTitle}}</a></div>
         <div class="link"></div>

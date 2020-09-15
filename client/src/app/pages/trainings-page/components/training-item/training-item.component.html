@@ -1,36 +1,61 @@
-<div class="main d-flex">
-  <div class="col-3">
-    <img src="../../../../assets/img/pages-img/trainings/{{training?.img}}.png" alt="">
+<div class="main">
+  <div  class="d-lg-none p-3">
+    <ng-container *ngTemplateOutlet="titleTemplate"></ng-container>
   </div>
 
-  <div class="col-6">
+  <div class="d-flex">
+    <div class="col-lg-3 col-6">
+      <img src="../../../../assets/img/pages-img/trainings/{{training?.img}}.png" alt="">
+    </div>
+
+    <div class="col-lg-6 d-none d-lg-block">
+      <ng-container *ngTemplateOutlet="titleTemplate"></ng-container>
+
+      <div class="audience">
+        <div class="training-audience">
+          Аудитория тренинга
+        </div>
+        <div class="description">
+          <p *ngFor="let des of training?.description">{{des}}</p>
+        </div>
+      </div>
+      <div class="preview">
+        <p *ngFor="let p of training?.preview">{{ p }}</p>
+
+      </div>
+    </div>
+
+    <div class="col-lg-3 col-6 action">
+      <img src="../../../../assets/img/pages-img/trainings/{{training?.audience?.img}}.png" alt="">
+      <div class="text-item">{{training?.audience.text}}</div>
+      <div class="text-item">{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</div>
+      <div class="text-item" *ngIf="training?.cost?.company">Для Компаний</div>
+      <div class="text-item" *ngIf="training?.cost?.people">Для частных лиц</div>
+      <div class="text-item">Читать подробнее</div>
+
+      <div class="d-none d-sm-block">
+        <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
+      </div>
+
+
+
+    </div>
+  </div>
+  <div class="d-sm-none d-block">
+    <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
+  </div>
+
+</div>
+
+
+<ng-template #titleTemplate>
     <div class="title">{{training?.title}}</div>
     <div class="sub-title" [routerLink]="'/trainings/' + training?._id">{{training?.subTitle}}</div>
-    <div class="audience">
-      <div class="training-audience">
-        Аудитория тренинга
-      </div>
-      <div class="description">
-        <p *ngFor="let des of training?.description">{{des}}</p>
-      </div>
-    </div>
-    <div class="preview">
-      <p *ngFor="let p of training?.preview">{{ p }}</p>
+</ng-template>
 
-    </div>
+<ng-template #buttonsTemplate>
+  <div class="buttons d-flex flex-column">
+    <button class="button-cost" [routerLink]="'/trainings/' + training?._id">Узнать подробнее</button>
+    <button class="button-request">ПОДАТЬ ЗАЯВКУ</button>
   </div>
-
-  <div class="col-3 action">
-    <img src="../../../../assets/img/pages-img/trainings/{{training?.audience?.img}}.png" alt="">
-    <div class="text-item">{{training?.audience.text}}</div>
-    <div class="text-item">{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</div>
-    <div class="text-item" *ngIf="training?.cost?.company">Для Компаний</div>
-    <div class="text-item" *ngIf="training?.cost?.people">Для частных лиц</div>
-    <div class="text-item">Читать подробнее</div>
-    <div class="buttons">
-      <button class="button-cost" [routerLink]="'/trainings/' + training?._id">Узнать подробнее</button>
-      <button class="button-request">ПОДАТЬ ЗАЯВКУ</button>
-    </div>
-
-  </div>
-</div>
+</ng-template>

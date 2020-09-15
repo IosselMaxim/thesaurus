@@ -10,6 +10,11 @@ import {MainClientsComponent} from './components/main-clients/main-clients.compo
 import {MainTrainersComponent} from './components/main-trainers/main-trainers.component';
 import {MainActivitiesComponent} from './components/main-activities/main-activities.component';
 import {MainConsultingComponent} from './components/main-consulting/main-consulting.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {SharedModule} from '../../shared/shared.module';
 
 
 @NgModule({
@@ -26,6 +31,11 @@ import {MainConsultingComponent} from './components/main-consulting/main-consult
   imports: [
     CommonModule,
     MainPageRoutingModule,
+    SharedModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
+    MatButtonModule,
   ]
 })
 export class MainPageModule {

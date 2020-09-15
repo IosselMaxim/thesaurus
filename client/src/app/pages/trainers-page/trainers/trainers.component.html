@@ -1,27 +1,27 @@
 <div class="main">
   <div class="trainers">
 
-    <div class="trainer " *ngFor="let trainer of trainers">
+    <div class="trainer d-flex flex-sm-row flex-column" *ngFor="let trainer of trainers">
 
-      <div class="trainer__img">
-        <img src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
+      <div class="trainer__img col-8 col-sm-5">
+        <img class="p-0 mb-3 pr-sm-3" src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
       </div>
 
 
-      <div class="trainer__info">
+      <div class="trainer__info col-sm-7 col-12">
 
-        <div class="name" [routerLink]="'/trainers/' + trainer?._id">
+        <div class="name justify-content-center justify-content-sm-start" [routerLink]="'/trainers/' + trainer?._id">
           {{trainer?.name?.firstName}} {{trainer?.name?.lastName}}
         </div>
 
-        <div class="line"></div>
+        <div class="line mx-auto mb-4 d-sm-none"></div>
         <div class="experience">Опыт проведения тренингов {{trainer?.experience}} лет</div>
         <div class="expertise">
           <p>{{trainer?.grade}}</p>
           <p>{{trainer?.expertise}}</p>
         </div>
 
-        <div class="experience-detail">
+        <div class="experience-detail d-none d-sm-block">
           <p>
             <img src="../../../../assets/img/main/trainers/icons/1-orange.png" alt="">
             <span>Провел{{ trainer?.isMan ? '' : 'а'}} более {{trainer?.experienceDetail?.trainingsSum}} различных тренингов</span>
@@ -35,7 +35,7 @@
             <span>Отработал{{ trainer?.isMan ? '' : 'а'}} более {{trainer?.experienceDetail?.hours}} тренинговых часов</span>
           </p>
         </div>
-        <div class="more">
+        <div class="more text-center text-sm-center">
           <button [routerLink]="'/trainers/' + trainer?._id">Подробнее о тренере</button>
         </div>
       </div>

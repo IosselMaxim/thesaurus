@@ -3,6 +3,7 @@
 
 
 .main {
+  color: $main-color;
 
   .img-and-menu {
     .img {
@@ -13,11 +14,21 @@
     }
 
     .menu {
+      @media screen and (max-width: 576px) {
+        font-size: 12px;
+      }
+      ul {
+        padding: 0;
+        list-style: none;
+      }
       button {
         position: relative;
         @include button(100%, 23px, $main-color, 12px, 11px, 500, none);
         min-width: 124px;
         margin-bottom: 10px;
+        white-space: nowrap;
+
+
       }
 
       .button-icon {

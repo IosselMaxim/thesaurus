@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {MENU} from '../../../../app-assets/constants/menu';
 
 @Component({
   selector: 'app-main',
@@ -7,6 +8,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MainComponent implements OnInit {
+  menu = MENU;
 
   constructor() { }
 

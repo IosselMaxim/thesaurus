@@ -7,6 +7,7 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CompanyComponent implements OnInit {
+  clientLogos = ['burda', 'camel', 'guta', 'jaguar', 'mers', 'nezav', 'rolf'];
 
   constructor() { }
 
