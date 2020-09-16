@@ -1,7 +1,7 @@
 
 <mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="over">
 
+  <mat-drawer #drawer class="example-sidenav" mode="over">
     <mat-nav-list>
       <div>
         <a mat-list-item
@@ -12,17 +12,14 @@
           {{link.name}}
         </a>
       </div>
-
     </mat-nav-list>
-
-
   </mat-drawer>
 
-  <div class="example-sidenav-content">
+  <div class="example-sidenav-content" [class.m-0]="isMainPage">
 
-    <nav class="nav">
-      <div class="container">
-        <div class="nav__logo">
+    <nav class="nav position-fixed" [class.d-md-none]="isMainPage">
+      <div class="container d-flex"  [class.justify-content-end]="isMainPage">
+        <div class="nav__logo" [class.d-none]="isMainPage">
           <img src="/assets/img/logo.png" alt="">
         </div>
 
@@ -45,16 +42,13 @@
             <mat-icon>menu</mat-icon>
           </button>
         </div>
-
-
       </div>
     </nav>
-    <app-title></app-title>
 
+    <app-title [class.d-none]="isMainPage"></app-title>
 
-    <div class="container">
       <router-outlet></router-outlet>
-    </div>
+
   </div>
   <app-footer></app-footer>
 

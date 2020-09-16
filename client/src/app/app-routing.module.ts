@@ -8,12 +8,13 @@ const routes: Routes = [
   //   path: '',
   //   loadChildren: () => import('./pages/development-page/development-page.module').then(m => m.DevelopmentPageModule)
   // }
-  {
-    path: '',
-    loadChildren: () => import('./pages/main-page/main-page.module').then(m => m.MainPageModule)
-  },
+
   {
     path: '', component: NavComponent, children: [
+      {
+        path: '',
+        loadChildren: () => import('./pages/main-page/main-page.module').then(m => m.MainPageModule)
+      },
       {
         path: 'contact',
         loadChildren: () => import('./pages/contact-page/contact-page.module').then(m => m.ContactPageModule)

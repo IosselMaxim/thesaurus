@@ -7,6 +7,10 @@
     height: $height-main-nav-middle;
   }
 
+  @media screen and (max-width: 767px) {
+    margin-top: $height-nav - 1px;
+  }
+
   &__container {
     position: absolute;
     margin: auto;
@@ -36,7 +40,12 @@
       }
       .button-trainings {
         button {
-          @include button(189px, 37px, $main-color, 7px, 11px, 500, $orange);
+          @include button(189px, 37px, $black, 7px, 11px, 500, $orange);
+          transition: 0.2s ease-out;
+          &:hover {
+            transition: 0.2s ease-out;
+            transform: scale(1.04);
+          }
         }
       }
       .motto {
@@ -104,10 +113,10 @@
         & > button {
           @include button(254px, 23px, $white, 12px, 9px, 500, none);
           margin: 20px 40px;
-          transition: 0.05s ease-out;
+          transition: 0.2s ease-out;
 
           &:hover {
-            transition: 0.05s ease-out;
+            transition: 0.2s ease-out;
             background: $white;
             color: unset;
           }
