@@ -38,7 +38,8 @@
 
     &:hover {
       transition: 0.2s ease-out;
-      transform: scale(1.04);
+      background: white;
+      color: $orange;
     }
   }
 }
@@ -66,7 +67,6 @@
         justify-content: center;
       }
     }
-
   }
 
 }

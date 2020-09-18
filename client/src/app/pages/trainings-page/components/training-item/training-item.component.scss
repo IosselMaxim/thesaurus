@@ -80,12 +80,24 @@
     .button-cost {
       @include button(170px, 23px, $gray, 12px, 9px);
       margin: 5px 10px;
+      transition: 0.2s;
+      &:hover {
+        transition: 0.2s;
+        background: $orange;
+        border: 1px solid $orange;
+        color: white;
+      }
     }
 
     .button-request {
       @include button(170px, 23px, $black, 12px, 9px, 500, $orange);
       margin: 5px 10px;
       border-color: $orange;
+      &:hover {
+        transition: 0.2s;
+        background: white;
+        color: orange;
+      }
     }
   }
 

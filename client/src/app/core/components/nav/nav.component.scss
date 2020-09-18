@@ -1,15 +1,19 @@
 @import "variables";
 
+
+
 .nav {
+  transition: 0.5s;
   top: 0;
   display: flex;
   align-items: center;
   width: 100%;
-  height: $height-nav;
+  height: 56px;
   background: $background-color-nav;
   z-index: 10;
 
   .container {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,6 +22,7 @@
       cursor: pointer;
       align-items: center;
       color: white;
+
       .sandwich {
         justify-content: center;
       }
@@ -43,16 +48,24 @@
     align-items: center;
 
     li {
+      display: flex;
+      align-items: center;
       cursor: pointer;
       padding: 0 20px;
       white-space: nowrap;
-      &:hover {
-        color: #5DCFC3;
+      border-bottom: 3px solid rgba(0,0,0,0);
+      transition: 0.2s;
+
+      &:not(.active):hover {
+        transition: 0.2s;
+        color: #5EC9C5;
+        border-color: #5EC9C5;
       }
     }
 
-    .active{
-      color: orange;
+    .active {
+      color: $orange;
+      border-color: $orange;
     }
 
     .disabled-active {
@@ -70,14 +83,57 @@
 
 
 .example-sidenav {
-  padding: 20px;
+  min-width: 200px;
+  margin-top: $height-nav;
 }
 
 .mat-drawer-container {
   background: #ffffff;
 }
 
-.example-sidenav-content {
-  margin-top: $height-nav
+.mat-list-base .mat-list-item {
+  font-size: 14px;
 }
 
+.mat-list-item-content {
+  padding: 0;
+}
+
+.mat-list-item-ripple {
+  padding-left: 20px !important;
+}
+
+mat-nav-list {
+  .active {
+    //color: white;
+    background: #e9ecef!important;
+  }
+}
+
+
+.nav-light {
+  transition: 0.5s;
+  background: $background-color-nav-light;
+  &:hover {
+    background: $background-color-nav;
+    transition: 0.5s;
+  }
+}
+
+
+.up {
+  position: fixed;
+  right: 40px;
+  bottom: 20px;
+  z-index: 99;
+  background: orange;
+  transition: 0.5s;
+  @media screen and (max-width: 576px){
+    right: 20px;;
+  }
+}
+
+.hidden {
+  bottom: -80px;
+  transition: 0.5s;
+}

@@ -26,7 +26,6 @@ import {MatButtonModule} from '@angular/material/button';
         MatIconModule,
         MatListModule,
         MatButtonModule,
-      SharedModule
     ],
     providers: [TitleService],
   exports: [

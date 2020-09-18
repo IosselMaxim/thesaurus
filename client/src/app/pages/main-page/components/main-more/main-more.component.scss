@@ -14,8 +14,9 @@
         border-color: $orange;
         transition: 0.2s ease-out;
         &:hover {
-          transition: 0.2s ease-out;
-          transform: scale(1.04);
+          transition: 0.2s;
+          background: white;
+          color: orange;
         }
       }
     }

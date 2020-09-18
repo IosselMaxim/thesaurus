@@ -1,6 +1,8 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, ViewChild} from '@angular/core';
 import {MENU} from '../../../../app-assets/constants/menu';
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
+import {map} from 'rxjs/operators';
+import {fromEvent} from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -8,10 +10,37 @@ import {Router} from '@angular/router';
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavComponent {
+export class NavComponent implements AfterViewInit, AfterContentInit {
+  @ViewChild('drawerRef') drawerRef;
+  mdtRef = null;
+  scroll = null;
+  menu = MENU;
 
   constructor(private router: Router) {}
-  menu = MENU;
+
+  ngAfterViewInit(): void {
+    this.mdtRef = document.getElementsByTagName('mat-drawer-content')[0];
+    fromEvent(this.mdtRef, 'scroll').subscribe(v => console.log(v));
+    // @ts-ignore
+    this.scroll = fromEvent(this.mdtRef, 'scroll').pipe(map((r: Event ) => r.target.scrollTop));
+    console.log('this.mdtRef', this.mdtRef);
+    console.log('this.drawerRef', this.drawerRef);
+
+
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.mdtRef.scrollTo(0, 0, 'auto');
+      }
+    });
+  }
+
+  scrollToTop() {
+    this.mdtRef.scrollTo(0, 0);
+  }
+
+  ngAfterContentInit(): void {
+
+  }
 
   get isMainPage() {
     return this.router.url === '/';

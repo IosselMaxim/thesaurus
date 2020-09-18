@@ -107,7 +107,9 @@
           transition: 0.2s;
           &:hover {
             transition: 0.2s;
-            background: #f4bb4a6b;
+            background: orange;
+            border: 1px solid orange;
+            color: white;
           }
         }
       }

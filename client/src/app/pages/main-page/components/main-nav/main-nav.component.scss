@@ -8,7 +8,7 @@
   }
 
   @media screen and (max-width: 767px) {
-    margin-top: $height-nav - 1px;
+    //margin-top: $height-nav - 1px;
   }
 
   &__container {
@@ -40,11 +40,13 @@
       }
       .button-trainings {
         button {
-          @include button(189px, 37px, $black, 7px, 11px, 500, $orange);
+          @include button(189px, 37px, $orange, 7px, 11px, 500, $orange);
+          color: $black;
           transition: 0.2s ease-out;
           &:hover {
             transition: 0.2s ease-out;
-            transform: scale(1.04);
+            background: white;
+            color: orange;
           }
         }
       }
@@ -114,6 +116,9 @@
           @include button(254px, 23px, $white, 12px, 9px, 500, none);
           margin: 20px 40px;
           transition: 0.2s ease-out;
+          @media screen and (max-width: 991px){
+            width: 200px;
+          }
 
           &:hover {
             transition: 0.2s ease-out;
