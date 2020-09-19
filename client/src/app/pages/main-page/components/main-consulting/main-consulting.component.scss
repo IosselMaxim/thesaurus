@@ -19,7 +19,7 @@
 
     .img {
       @include flex-center;
-      padding-left: 30px;
+      padding: 0 30px;
 
       img {
         width: 100%;
@@ -36,6 +36,12 @@
         margin-left: 15px;
         border-left: 2px solid $main-color;
         line-height: 23px;
+        @media screen and (max-width: 991px){
+          border-left: 0;
+          margin-left: 0;
+
+          padding: 10px 15px;
+        }
       }
     }
 
@@ -62,6 +68,13 @@
     padding: 15px;
     button {
       @include button(230px, 23px, $gray, 12px, 9px, 500, none);
+      transition: 0.2s;
+      &:hover {
+        transition: 0.2s;
+        background: $orange;
+        border: 1px solid $orange;
+        color: white;
+      }
     }
   }
 }

@@ -1,83 +1,105 @@
-<div class="main">
-  <div class="content d-flex">
-    <div class="img-and-menu col-3">
-      <div class="img"><img src="../../../../assets/img/pages-img/trainings/{{training?.img}}.png" alt=""></div>
-      <div class="menu">
-        <button class="button-icon">
-          <img src="../../../../assets/img/pages-img/training/{{training?.audience?.img}}.png" alt="">
-          <span>{{training?.audience?.text}}</span>
-        </button>
-        <button class="">
-          <span>{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</span>
-        </button>
-        <button class="" *ngIf="training?.cost?.company">
-          <span>Для Компаний</span>
-        </button>
-        <button class="" *ngIf="training?.cost?.people">
-          <span>Для частных лиц</span>
-        </button>
-      </div>
-    </div>
-    <div class="text col-9">
-      <div class="title">{{training?.title}}</div>
-      <div class="sub-title">{{training?.subTitle}}</div>
-      <div class="training-audience">Аудитория тренинга:</div>
-      <div class="description">
-        <p *ngFor="let i of training?.description">{{i}}</p>
-      </div>
-      <div class="text">{{training?.text}}</div>
-      <div class="format-duration">
-        <div class="title">Формат проведения тренинга:</div>
-        <div class="format">{{training?.info?.format}}</div>
-        <div class="duration">{{training?.info?.duration}}</div>
-      </div>
+<div class="container">
+  <div class="main">
+    <div class="content d-flex flex-column flex-lg-row">
 
-      <div class="cost">
-        <div class="title">
-          <img src="../../../../assets/img/pages-img/training/rub.png" alt="">
-          <span>Стоимость тренинга</span>
-        </div>
+      <div class="img-and-menu col-12 col-lg-3 d-flex d-lg-block flex-lg-column">
 
-        <div class="company" *ngIf="training?.cost?.company">
-          <div class="company-title">Для Компаний</div>
-          <div class="consistTitle">{{training?.cost?.company?.consistTitle}}</div>
-          <div class="consist">
+        <div class="img col-6 col-lg-12 pl-0"><img src="/assets/img/pages-img/trainings/{{training?.img}}.png" alt=""></div>
+
+        <div class="menu col-6 col-lg-12">
+
+          <div class="d-lg-none d-lg-none">
+            <img src="/assets/img/pages-img/training/{{training?.audience?.img}}.png" alt="">
             <ul>
-              <li *ngFor="let cons of training?.cost?.company?.consist">{{cons}}</li>
+              <li><span class="mb-2">{{training?.audience?.text}}</span></li>
+              <li><span>{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</span></li>
+              <li *ngIf="training?.cost?.company"><span>Для Компаний</span></li>
+              <li *ngIf="training?.cost?.people"><span>Для частных лиц</span></li>
             </ul>
           </div>
-
-          <div class="sum">Стоимость тренинга для корпоративных Клиентов составляет <strong>{{training?.cost?.company?.sum}}</strong> рублей</div>
-          <button class="req-button">ПОДАТЬ ЗАЯВКУ</button>
-
-          <div class="info">
-            <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
-            <p>Вы также можете подать заявку и задать все интересующие Вас вопросы,
-              позвонив по телефону <strong>8(495)777-77-77</strong></p>
+          <div class="d-none d-lg-block">
+            <button class="button-icon">
+              <img src="../../../../assets/img/pages-img/training/{{training?.audience?.img}}.png" alt="">
+              <span>{{training?.audience?.text}}</span>
+            </button>
+            <button class="">
+              <span>{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</span>
+            </button>
+            <button class="" *ngIf="training?.cost?.company">
+              <span>Для Компаний</span>
+            </button>
+            <button class="" *ngIf="training?.cost?.people">
+              <span>Для частных лиц</span>
+            </button>
           </div>
-
         </div>
-        <div class="people" *ngIf="training?.cost?.people">
-          <div class="company-title">Для частных лиц</div>
-          <div class="consistTitle">{{training?.cost?.people?.consistTitle}}</div>
-          <div class="consist">
-            <ul>
-              <li *ngFor="let cons of training?.cost?.people?.consist">{{cons}}</li>
-            </ul>
+
+
+
+      </div>
+      <div class="text col-12 col-lg-9">
+        <div class="title">{{training?.title}}</div>
+        <div class="sub-title">{{training?.subTitle}}</div>
+        <div class="training-audience">Аудитория тренинга:</div>
+        <div class="description">
+          <p *ngFor="let i of training?.description">{{i}}</p>
+        </div>
+        <div class="text">{{training?.text}}</div>
+        <div class="format-duration">
+          <div class="title">Формат проведения тренинга:</div>
+          <div class="format">{{training?.info?.format}}</div>
+          <div class="duration">{{training?.info?.duration}}</div>
+        </div>
+
+        <div class="cost">
+          <div class="title">
+            <img src="../../../../assets/img/pages-img/training/rub.png" alt="">
+            <span>Стоимость тренинга</span>
           </div>
 
-          <div class="sum">Стоимость участия в тренинге для частных лиц составляет <strong>{{training?.cost?.people?.sum}}</strong> рублей</div>
-          <button class="req-button">ЗАПИСАТЬСЯ</button>
+          <div class="company" *ngIf="training?.cost?.company">
+            <div class="company-title">Для Компаний</div>
+            <div class="consistTitle">{{training?.cost?.company?.consistTitle}}</div>
+            <div class="consist">
+              <ul>
+                <li *ngFor="let cons of training?.cost?.company?.consist">{{cons}}</li>
+              </ul>
+            </div>
 
-          <div class="info">
-            <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
-            <p>Вы также можете подать заявку и задать все интересующие Вас вопросы,
-              позвонив по телефону <strong>8(495)777-77-77</strong></p>
+            <div class="sum">Стоимость тренинга для корпоративных Клиентов составляет <strong>{{training?.cost?.company?.sum}}</strong> рублей</div>
+            <button class="req-button">ПОДАТЬ ЗАЯВКУ</button>
+
+            <div class="info">
+              <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
+              <p>Вы также можете подать заявку и задать все интересующие Вас вопросы,
+                позвонив по телефону <strong>8(495)777-77-77</strong></p>
+            </div>
+
           </div>
+          <div class="people" *ngIf="training?.cost?.people">
+            <div class="company-title">Для частных лиц</div>
+            <div class="consistTitle">{{training?.cost?.people?.consistTitle}}</div>
+            <div class="consist">
+              <ul>
+                <li *ngFor="let cons of training?.cost?.people?.consist">{{cons}}</li>
+              </ul>
+            </div>
+
+            <div class="sum">Стоимость участия в тренинге для частных лиц составляет <strong>{{training?.cost?.people?.sum}}</strong> рублей</div>
+            <button class="req-button">ЗАПИСАТЬСЯ</button>
+
+            <div class="info">
+              <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
+              <p>Вы также можете подать заявку и задать все интересующие Вас вопросы,
+                позвонив по телефону <strong>8(495)777-77-77</strong></p>
+            </div>
 
 
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 </div>
+

@@ -2,7 +2,11 @@
 @import "variables";
 
 .main {
+  color: $main-color;
   margin: 50px 0;
+  @media screen and (max-width: 992px){
+    margin: 0 20px 30px 0;
+  }
   .title {
     font-style: normal;
     font-weight: 200;
@@ -63,20 +67,38 @@
     }
 
     .buttons {
-      margin-top: 10px;
-
-      .button-cost {
-        @include button(170px, 23px, $gray, 12px, 9px);
-        margin: 5px 10px;
-      }
-
-      .button-request {
-        @include button(170px, 23px, $black, 12px, 9px, 500, $orange);
-        margin: 5px 10px;
-        border-color: $orange;
-      }
+      display: block;
+      align-items: flex-start;
     }
   }
 
+  .buttons {
+    margin-top: 10px;
+    align-items: center;
+
+
+    .button-cost {
+      @include button(170px, 23px, $gray, 12px, 9px);
+      margin: 5px 10px;
+      transition: 0.2s;
+      &:hover {
+        transition: 0.2s;
+        background: $orange;
+        border: 1px solid $orange;
+        color: white;
+      }
+    }
+
+    .button-request {
+      @include button(170px, 23px, $black, 12px, 9px, 500, $orange);
+      margin: 5px 10px;
+      border-color: $orange;
+      &:hover {
+        transition: 0.2s;
+        background: white;
+        color: orange;
+      }
+    }
+  }
 
 }

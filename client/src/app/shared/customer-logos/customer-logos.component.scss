@@ -3,7 +3,6 @@
 
 .main {
   @include main;
-  margin-top: 70px;
   .text {
     font-style: normal;
     font-weight: 500;
@@ -11,7 +10,7 @@
     line-height: 20px;
     color: $gray;
     @media screen and (max-width: 576px){
-      font-size: 0.7rem;
+      font-size: 0.9rem;
     }
   }
   .clients {

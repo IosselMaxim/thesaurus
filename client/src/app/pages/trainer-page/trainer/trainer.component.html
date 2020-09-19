@@ -1,67 +1,73 @@
+<div class="container">
+  <div class="main p-2">
+    <div class="back d-flex justify-content-start align-items-center" routerLink="/trainers">
+      <img src="../../../../assets/img/icon/arrow-left.png" alt="">
+      <span>Назад к списку тренеров</span>
+    </div>
+    <div class="trainers">
+
+      <div class="trainer d-flex flex-column flex-sm-row">
+
+        <div class="img col-sm-4 col-8 mx-auto mb-4">
+          <img class="p-0 pr-sm-5" src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
+        </div>
+
+        <div class="info col-sm-8">
+
+          <div class="name text-sm-left text-center" [routerLink]="'/trainers/' + trainer?._id">
+            {{trainer?.name?.firstName}} {{trainer?.name?.lastName}}
+          </div>
+
+          <div class="line mx-auto mb-4 d-sm-none"></div>
+
+          <div class="experience">Опыт проведения тренингов {{trainer?.experience}} лет</div>
+          <div class="expertise">
+            <p>{{trainer?.grade}}</p>
+            <p>{{trainer?.expertise}}</p>
+          </div>
+          <div class="area-of-expertise">Сферы экспертности:</div>
+          <div class="skills">
+            <ul>
+              <li *ngFor="let skill of trainer?.skills">
+                {{skill}}
+              </li>
+            </ul>
+          </div>
 
 
-<div class="main">
-  <div class="back d-flex justify-content-start align-items-center" routerLink="/trainers">
-    <img src="../../../../assets/img/icon/arrow-left.png" alt="">
-    <span>Назад к списку тренеров</span>
-  </div>
-  <div class="trainers">
-
-    <div class="d-flex trainer">
-
-      <div class="img col-4">
-        <img src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
+        </div>
       </div>
-      <div class="info col-8">
 
-        <div class="name" [routerLink]="'/trainers/' + trainer?._id">
-          {{trainer?.name?.firstName}} {{trainer?.name?.lastName}}
-        </div>
-        <div class="experience">Опыт проведения тренингов {{trainer?.experience}} лет</div>
-        <div class="expertise">
-          <p>{{trainer?.grade}}</p>
-          <p>{{trainer?.expertise}}</p>
-        </div>
-        <div class="area-of-expertise">Сферы экспертности:</div>
-        <div class="skills">
-          <ul>
-            <li *ngFor="let skill of trainer?.skills">
-              {{skill}}
-            </li>
-          </ul>
-        </div>
-
-
-      </div>
     </div>
 
+    <div class="text">
+      {{trainer?.text}}
+    </div>
+
+    <div class="upper-education">
+      <div class="title">Повышение тренерского мастерства:</div>
+      <ul>
+        <li *ngFor="let i of trainer?.upperEducation">
+          {{i}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="education">
+      <div class="title">Высшее образование::</div>
+      <ul>
+        <li *ngFor="let i of trainer?.education">
+          {{i}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="education">
+      <div class="title">Лично обучала сотрудников Компаний:</div>
+    </div>
+
+    <div class="clients"></div>
   </div>
 
-  <div class="text">
-    {{trainer?.text}}
-  </div>
-
-  <div class="upper-education">
-    <div class="title">Повышение тренерского мастерства:</div>
-    <ul>
-      <li *ngFor="let i of trainer?.upperEducation">
-        {{i}}
-      </li>
-    </ul>
-  </div>
-
-  <div class="education">
-    <div class="title">Высшее образование::</div>
-    <ul>
-      <li *ngFor="let i of trainer?.education">
-        {{i}}
-      </li>
-    </ul>
-  </div>
-
-  <div class="education">
-    <div class="title">Лично обучала сотрудников Компаний:</div>
-  </div>
-
-  <div class="clients"></div>
 </div>
+

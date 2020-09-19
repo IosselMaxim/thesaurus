@@ -31,13 +31,52 @@
   }
 
   button {
-    @include button(189px, 37px, $main-color, 7px, 11px, 500, $orange);
+    @include button(189px, 37px, $black, 7px, 11px, 500, $orange);
     border-color: $orange;
     margin-bottom: 70px;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      transition: 0.2s ease-out;
+      background: white;
+      color: $orange;
+    }
+  }
+}
+
+.nav {
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: $height-nav;
+  background: $background-color-nav;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .menu {
+      cursor: pointer;
+      align-items: center;
+      color: white;
+
+      .sandwich {
+        justify-content: center;
+      }
+    }
   }
 
-  a {
-    text-decoration-color: $gray;
-  }
+}
+
+
+.example-sidenav {
+  padding: 20px;
+}
+
+.mat-drawer-container {
+  background: #ffffff;
 }
 

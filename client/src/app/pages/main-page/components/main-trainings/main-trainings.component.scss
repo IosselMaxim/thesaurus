@@ -12,13 +12,16 @@
       .title {
         font-style: normal;
         font-weight: 500;
-        font-size: 19px;
+        font-size: 1.1rem;
         line-height: 28px;
         text-align: center;
         letter-spacing: 0.07em;
         color: $main-color;
         width: 100%;
         padding: 20px 30px;
+        @media screen and (max-width: 576px){
+          font-size: 0.9rem;
+        }
       }
       .img {
         padding: 0 0 20px 0;

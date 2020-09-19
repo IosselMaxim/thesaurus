@@ -1,53 +1,104 @@
 @import "mixins";
 @import "variables";
 .main {
+  position: relative;
   height: $height-main-nav;
+  @media screen and (max-width: 1200px) {
+    height: $height-main-nav-middle;
+  }
+
+  @media screen and (max-width: 767px) {
+    //margin-top: $height-nav - 1px;
+  }
+
+  &__container {
+    position: absolute;
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+
+    .text {
+      position: absolute;
+      left: 65px;
+      bottom: 0;
+      z-index: 5;
+      @media screen and (max-width: 1200px) {
+        left: 25px;
+      }
+
+      & > * {
+        padding-bottom: 30px;
+      }
+      .services {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 23px;
+        color: $white;
+        width: 175px;
+      }
+      .button-trainings {
+        button {
+          @include button(189px, 37px, $orange, 7px, 11px, 500, $orange);
+          color: $black;
+          transition: 0.2s ease-out;
+          &:hover {
+            transition: 0.2s ease-out;
+            background: white;
+            color: orange;
+          }
+        }
+      }
+      .motto {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        color: $gray;
+      }
+    }
+
+  }
+
   .main-nav {
     position: relative;
     min-width: 100%;
     width: $max-width-container;
     height: $height-main-nav;
-    background-image: url('../../../../../assets/img/main/main-nav-background.png'); /* Путь к фоновому изображению */
+    background-image: url('../../../../../assets/img/main/main-title-background.png'); /* Путь к фоновому изображению */
     background-color: #35281b; /* Цвет фона */
-    background-position: left top;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: auto;
 
-    &__white-triangle {
-      z-index: 1;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-image: url('../../../../../assets/img/main/white-triangle.svg'); /* Путь к фоновому изображению */
+    @media screen and (max-width: 1200px) {
+      position: relative;
+      min-width: 100%;
+      width: $max-width-container;
+      height: $height-main-nav-middle;
+      background-image: url('../../../../../assets/img/main/main-title-background-middle.png'); /* Путь к фоновому изображению */
+      background-position: left top;
       background-repeat: no-repeat;
-    }
-
-    &__blue-triangle {
-      z-index: 2;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-image: url('../../../../../assets/img/main/blue-triangle.svg'); /* Путь к фоновому изображению */
-      background-repeat: no-repeat;
+      background-size: auto;
     }
 
     &__logo {
       z-index: 4;
       position: absolute;
-      left: 380px;
+      left: 0;
       right: 0;
       top: 0;
       bottom: 0;
       background-image: url('../../../../../assets/img/main/logo-main-page.svg'); /* Путь к фоновому изображению */
       background-repeat: no-repeat;
+      @media screen and (max-width: 1200px) {
+        left: -40px;
+      }
     }
 
     &__menu {
-      z-index: 3;
+      z-index: 5;
       position: absolute;
       top: 0;
       right: 0;
@@ -64,47 +115,19 @@
         & > button {
           @include button(254px, 23px, $white, 12px, 9px, 500, none);
           margin: 20px 40px;
-          transition: 0.05s ease-out;
+          transition: 0.2s ease-out;
+          @media screen and (max-width: 991px){
+            width: 200px;
+          }
 
           &:hover {
-            transition: 0.05s ease-out;
+            transition: 0.2s ease-out;
             background: $white;
             color: unset;
           }
         }
       }
 
-    }
-
-    .text {
-      position: absolute;
-      left: 400px;
-      bottom: 0;
-      z-index: 5;
-
-      & > * {
-        padding-bottom: 30px;
-      }
-      .services {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 23px;
-        color: $white;
-        width: 175px;
-      }
-      .button-trainings {
-        button {
-          @include button(189px, 37px, $main-color, 7px, 11px, 500, $orange);
-        }
-      }
-      .motto {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        color: $gray;
-      }
     }
   }
 

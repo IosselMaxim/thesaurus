@@ -1,6 +1,21 @@
+@import "variables";
+
 .footer {
-  display: block;
-  height: 450px;
+  color: #FFFFFF;
+  height: 340px;
   background: rgb(23, 55, 94);
   background: linear-gradient(0deg, rgba(23, 55, 94, 1) 0%, rgba(29, 68, 116, 1) 50%, rgba(23, 55, 94, 1) 100%);
+
+  .menu {
+    a {
+      color: #FFFFFF;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 3;
+    }
+  }
+
+  .contacts p:nth-child(1) {
+    color: $orange;
+  }
 }

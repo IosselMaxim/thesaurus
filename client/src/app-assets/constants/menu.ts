@@ -2,7 +2,7 @@ export const MENU = [
   {
     url: '/',
     name: 'ГЛАВНАЯ',
-    exact: false,
+    exact: true,
     disabled: false
   },
   {

@@ -1,12 +1,16 @@
-<div class="consulting">
-  <div class="consulting__img">
-    <img class="m-auto" src="/assets/img/pages-img/org-cons.png" alt="">
-  </div>
-  <div class="consulting__text">
-    <div class="consulting__text--title">Организациионный консалтинг</div>
-    <div class="consulting__text--description">Построение системы обучения в компании Клиента</div>
-    <hr>
-    <div class="consulting__text--text" [innerHTML]="text">
+
+<div class="container">
+  <div class="mt-4 consulting d-flex flex-column flex-sm-row">
+    <div class="consulting__img col-12 col-sm-4">
+      <img class="m-auto d-none d-sm-block" src="/assets/img/pages-img/org-cons.png" alt="">
+      <img class="w-100 m-auto d-block d-sm-none" src="/assets/img/pages-img/consulting-long.png" alt="">
+    </div>
+    <div class="consulting__text col-12 col-sm">
+      <div class="consulting__text--title text-center text-sm-left">Организациионный консалтинг</div>
+      <div class="consulting__text--description text-center text-sm-left">Построение системы обучения в компании Клиента</div>
+      <hr class="d-sm-none">
+      <div class="consulting__text--text" [innerHTML]="text">
+      </div>
     </div>
   </div>
 </div>

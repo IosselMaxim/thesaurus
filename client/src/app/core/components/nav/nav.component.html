@@ -1,60 +1,55 @@
-
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="over">
-
-    <mat-nav-list>
-      <div>
-        <a mat-list-item
-           *ngFor="let link of menu"
-           [routerLink]="[link.url]" [routerLinkActive]="['active']"
-           (click)="drawer.toggle()"
-        >
-          {{link.name}}
-        </a>
-      </div>
-
-    </mat-nav-list>
+<nav class="nav position-fixed" [class.d-md-none]="isMainPage" [class.nav-light]="(scroll | async) || 0">
+  <div class="container d-flex"  [class.justify-content-end]="isMainPage">
+    <div class="nav__logo" [class.d-none]="isMainPage">
+      <a routerLink="/" ><img src="/assets/img/logo.png" alt=""></a>
+    </div>
 
 
-  </mat-drawer>
+    <ul class="nav__menu d-md-flex d-none">
+      <li class="nav__menu"
+          *ngFor="let link of menu"
+          [routerLink]="[link.url]"
+          [class.disabled]="link.disabled"
+          [routerLinkActive]="['active']"
+          [class.disabled-active]="link.url === '/'"
+          [routerLinkActiveOptions]="{ exact: link.exact }"
+      >
+        {{link.name}}
+      </li>
+    </ul>
 
-  <div class="example-sidenav-content">
-
-    <nav class="nav">
-      <div class="container">
-        <div class="nav__logo">
-          <img src="/assets/img/logo.png" alt="">
-        </div>
-
-
-        <ul class="nav__menu d-md-flex d-none">
-          <li class="nav__menu"
-              *ngFor="let link of menu"
-              [routerLink]="[link.url]"
-              [class.disabled]="link.disabled"
-              [routerLinkActive]="['active']"
-              [class.disabled-active]="link.url === '/'"
-          >
-            {{link.name}}
-          </li>
-        </ul>
-
-        <div class="menu d-md-none d-flex" (click)="drawer.toggle()">
-          Меню
-          <button mat-icon-button class="sandwich">
-            <mat-icon>menu</mat-icon>
-          </button>
-        </div>
-
-
-      </div>
-    </nav>
-    <app-title></app-title>
-
-
-    <div class="container">
-      <router-outlet></router-outlet>
+    <div class="menu d-md-none d-flex" (click)="drawer.toggle()">
+      Меню
+      <button mat-icon-button class="sandwich ml-2">
+        <mat-icon>menu</mat-icon>
+      </button>
     </div>
   </div>
+</nav>
+
+<mat-drawer-container class="example-container" [class.p-md-0]="isMainPage" autosize #drawerRef [style.padding-top.px]="54 - ((scroll | async) || 0) > 0 ? 54 - ((scroll | async) || 0) : 0">
+
+  <mat-drawer #drawer class="example-sidenav" mode="over">
+    <mat-nav-list class="nav-list" >
+      <div class="pt-4">
+        <a mat-list-item
+           *ngFor="let link of menu"
+           [routerLink]="[link.url]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: link.exact }"
+        >
+          <span class="px-2">{{link.name}}</span>
+        </a>
+      </div>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="example-sidenav-content" [class.m-0]="isMainPage">
+
+    <app-title [class.d-none]="isMainPage"></app-title>
+      <router-outlet></router-outlet>
+
+  </div>
+  <app-footer></app-footer>
 
 </mat-drawer-container>
+
+<button mat-fab class="up" [class.hidden]="((scroll | async) || 0) < 100" (click)="scrollToTop()"><mat-icon>keyboard_arrow_up</mat-icon></button>

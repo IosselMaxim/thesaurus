@@ -3,14 +3,21 @@
 
 .main {
   @include main;
+  color: $main-color;
 
   .more {
     .button {
       @include flex-center;
 
       button {
-        @include button(189px, 37px, $main-color, 7px, 11px, 500, $orange);
+        @include button(189px, 37px, $black, 7px, 11px, 500, $orange);
         border-color: $orange;
+        transition: 0.2s ease-out;
+        &:hover {
+          transition: 0.2s;
+          background: white;
+          color: orange;
+        }
       }
     }
 
@@ -18,12 +25,15 @@
       p {
         padding: 10px 0;
       }
-      padding-left: 100px;
       border-left: 3px solid $main-color;
       font-style: normal;
       font-weight: 300;
       font-size: 14px;
       line-height: 20px;
+
+      @media screen and (max-width: 991px){
+        border-left: none;
+      }
     }
   }
 

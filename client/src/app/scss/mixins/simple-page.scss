@@ -1,14 +1,10 @@
-@import "~bootstrap";
+@import "variables";
+
 
 @mixin simple-page($mt) {
-  @extend .d-flex;
-  @extend .flex-column;
-  @extend .flex-sm-row;
 
   color: #17375E;
   &__img {
-    @extend .col-12;
-    @extend .col-sm-4;
     img {
       width: 270px;
       height: auto;
@@ -17,15 +13,12 @@
     margin-bottom: 1rem!important;
   }
   &__text {
-    @extend .col-12;
-    @extend .col-sm-8;
     & > * {
       padding-bottom: 25px;
     }
 
     &--title {
-      @extend .text-center;
-      @extend .text-sm-left;
+
       p {
         font-size: 20px;
         font-weight: 400;
@@ -37,8 +30,6 @@
     }
 
     &--description {
-      @extend .text-center;
-      @extend .text-sm-left;
       color: $gray;
       font-size: 14px;
     }
@@ -47,7 +38,6 @@
     }
   }
   hr {
-    @extend .d-sm-none;
     border-top: 4px solid #17375E;
   }
 }

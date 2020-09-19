@@ -1,17 +1,8 @@
 <div class="main w-100 d-flex justify-content-center">
-  <div class="main-nav">
-    <div class="main-nav__menu">
-      <div class="buttons">
-        <button *ngFor="let link of menu | slice:1"
-                [routerLink]="link.url"
-        >{{link.name}}</button>
-      </div>
-    </div>
-    <div class="main-nav__white-triangle">
-      <div class="main-nav__logo"></div>
-    </div>
 
-    <div class="main-nav__blue-triangle"></div>
+  <div class="main__container">
+
+    <div class="main-nav__logo"></div>
 
     <div class="text">
       <div class="services">Бизнес-тренинги Корпоративное обучение Открытые мероприятия</div>
@@ -20,6 +11,20 @@
       </div>
       <div class="motto">Основано на практике. Нацелено на результат.</div>
     </div>
+
+  </div>
+
+
+  <div class="main-nav">
+    <div class="main-nav__menu d-none d-md-flex">
+      <div class="buttons">
+        <button *ngFor="let link of menu | slice:1"
+                [routerLink]="link.url"
+        >{{link.name}}</button>
+      </div>
+    </div>
+
+
   </div>
 </div>
 
