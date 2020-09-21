@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { TrainingsPageRoutingModule } from './trainings-page-routing.module';
-import { TrainingsComponent } from './trainings/trainings.component';
-import { FilterComponent } from './components/filter/filter.component';
-import { TrainingItemComponent } from './components/training-item/training-item.component';
+import {TrainingsPageRoutingModule} from './trainings-page-routing.module';
+import {TrainingsComponent} from './trainings/trainings.component';
+import {FilterComponent} from './components/filter/filter.component';
+import {TrainingItemComponent} from './components/training-item/training-item.component';
 
 
 @NgModule({
@@ -14,4 +14,5 @@ import { TrainingItemComponent } from './components/training-item/training-item.
     TrainingsPageRoutingModule
   ]
 })
-export class TrainingsPageModule { }
+export class TrainingsPageModule {
+}

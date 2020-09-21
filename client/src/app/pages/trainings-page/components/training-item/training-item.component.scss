@@ -102,3 +102,42 @@
   }
 
 }
+
+.dialog {
+  img {
+    width: fit-content;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .gray {
+    color: $gray;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .blue {
+    color: $main-color;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .phone {
+    color: $orange;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  button {
+    @include button(189px, 37px, $black, 7px, 11px, 500, $orange);
+    border-color: $orange;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      transition: 0.2s ease-out;
+      background: white;
+      color: $orange;
+    }
+  }
+}

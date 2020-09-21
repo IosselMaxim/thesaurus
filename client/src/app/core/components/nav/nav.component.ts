@@ -1,4 +1,4 @@
-import {AfterContentInit, AfterViewInit, ChangeDetectionStrategy, Component, ViewChild} from '@angular/core';
+import {AfterViewInit, ChangeDetectionStrategy, Component, ViewChild} from '@angular/core';
 import {MENU} from '../../../../app-assets/constants/menu';
 import {NavigationEnd, Router} from '@angular/router';
 import {map} from 'rxjs/operators';
@@ -10,7 +10,7 @@ import {fromEvent} from 'rxjs';
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NavComponent implements AfterViewInit, AfterContentInit {
+export class NavComponent implements AfterViewInit {
   @ViewChild('drawerRef') drawerRef;
   mdtRef = null;
   scroll = null;
@@ -36,10 +36,6 @@ export class NavComponent implements AfterViewInit, AfterContentInit {
 
   scrollToTop() {
     this.mdtRef.scrollTo(0, 0);
-  }
-
-  ngAfterContentInit(): void {
-
   }
 
   get isMainPage() {

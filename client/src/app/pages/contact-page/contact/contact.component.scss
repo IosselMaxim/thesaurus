@@ -1,0 +1,23 @@
+@import "mixins";
+
+.contacts {
+  @include simple-page(0);
+  .telephones {
+    font-weight: 500;
+    & > p {
+      padding-bottom: 0.25rem;
+    }
+    a {
+      color: $main-color;
+    }
+    p:nth-child(1) {
+      a {
+        color: $orange;
+      }
+
+    }
+  }
+  .address > p {
+    padding-bottom: 0.25rem;
+  }
+}

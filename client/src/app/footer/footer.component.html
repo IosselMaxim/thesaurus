@@ -1,6 +1,6 @@
 <footer class="footer d-flex align-items-center">
 
-  <div class="container d-flex">
+  <div class="container d-flex flex-column flex-sm-row">
     <div class="menu col-4 d-none d-sm-flex align-items-center">
       <div class="d-flex flex-column">
         <a
@@ -13,14 +13,28 @@
     </div>
 
     <div class="logo col-12 col-sm-4 pt-2">
-      <img src="/assets/img/main/logo-white.png" alt="">
+      <img class="d-block d-sm-none mb-2" src="/assets/img/logo-short.png" alt="">
+      <img class="d-sm-block d-none" src="/assets/img/main/logo-white.png" alt="">
+      <div class="text mt-4 d-none d-sm-block">
+        <ng-container class="d-none d-sm-block" *ngTemplateOutlet="practiceAndResult"></ng-container>
+      </div>
+
     </div>
 
-    <div class="contacts d-none d-sm-block col-4 pt-2">
+    <div class="contacts d-block col-12 col-sm-4 pt-2">
       <p>8(495)231-84-06</p>
       <p>8(985)570-70-33</p>
       <p class="mt-4">welcome@thesaurus-trainings.ru</p>
+      <div class="text mt-4 d-block d-sm-none">
+        <ng-container class="d-none d-sm-block" *ngTemplateOutlet="practiceAndResult"></ng-container>
+      </div>
+
     </div>
 
   </div>
 </footer>
+
+<ng-template #practiceAndResult>
+    <p>Основано на практике</p>
+    <p>Нацелено на результат</p>
+</ng-template>
