@@ -1,5 +1,5 @@
 @import "mixins";
 
 .company {
-  @include simple-page(0);
+  @include simple-page(8px);
 }

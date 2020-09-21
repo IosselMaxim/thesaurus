@@ -31,7 +31,6 @@
       <div class="text-item">{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</div>
       <div class="text-item" *ngIf="training?.cost?.company">Для Компаний</div>
       <div class="text-item" *ngIf="training?.cost?.people">Для частных лиц</div>
-      <div class="text-item">Читать подробнее</div>
 
       <div class="d-none d-sm-block">
         <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
@@ -56,29 +55,8 @@
 <ng-template #buttonsTemplate>
   <div class="buttons d-flex flex-column">
     <button class="button-cost" [routerLink]="'/trainings/' + training?._id">Узнать подробнее</button>
-    <button class="button-request" (click)="openDialog()">ПОДАТЬ ЗАЯВКУ</button>
+    <button class="button-request" (click)="applyRef.openDialog()">ПОДАТЬ ЗАЯВКУ</button>
   </div>
 </ng-template>
 
-
-<ng-template #dialogRef>
-  <div class="dialog text-center">
-    <div class="dialog-nav d-flex justify-content-between mb-3">
-      <div class="img">
-        <img class="w-auto h-auto" src="/assets/img/logo-short-blue.png" alt="">
-      </div>
-
-      <p class="gray">Заявка на тренинг</p>
-    </div>
-    <p class="blue">Для того, чтобы оставить заявку на тренинг</p>
-    <button class="mb-3" routerLink="/trainings">НАПИШИТЕ НАМ</button>
-    <p class="blue">по адресу:</p>
-    <p class="blue pb-3">welcome@thesaurus-trainings.ru</p>
-    <p class="gray pb-1">В письме укажите, какой тренинг Вас интересует, и как с Вами будет удобно связаться.</p>
-    <p class="gray">Наш консультант свяжется с Вами в течение дня и обсудит все детали.</p>
-    <p class="blue">или позвоните нам по телефону:</p>
-    <p class="phone">8(495)231-84-06</p>
-    <p class="gray">Мы уже ждем Вашего звонка!</p>
-
-  </div>
-</ng-template>
+<app-apply #applyRef></app-apply>

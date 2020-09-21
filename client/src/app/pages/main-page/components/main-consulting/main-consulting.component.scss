@@ -4,6 +4,7 @@
 .main {
   @include main;
   margin-bottom: 50px;
+  padding-top: 0;
   p {
     @include p;
 

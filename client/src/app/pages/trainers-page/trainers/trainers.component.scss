@@ -2,9 +2,9 @@
 @import "variables";
 
 .main {
-  margin-top: 50px;
   display: flex;
   justify-content: center;
+  color: $main-color;
   .trainers {
     max-width: 750px;
   }

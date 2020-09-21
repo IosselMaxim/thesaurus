@@ -45,7 +45,7 @@
           transition: 0.2s ease-out;
           &:hover {
             transition: 0.2s ease-out;
-            background: white;
+            background: none;
             color: orange;
           }
         }
@@ -115,6 +115,7 @@
         & > button {
           @include button(254px, 23px, $white, 12px, 9px, 500, none);
           margin: 20px 40px;
+          letter-spacing: 0.25rem;
           transition: 0.2s ease-out;
           @media screen and (max-width: 991px){
             width: 200px;

@@ -1,13 +1,15 @@
 @import "mixins";
 
 .nav-nav {
+  color: $main-color;
   position: relative;
+  font-weight: 500;
   height: 17vh;
 
   .title {
     @include flex-center;
     position: absolute;
-    height: 14vh;
+    height: 17vh;
     padding-bottom: 3vh;
     top: 0;
     left: 0;

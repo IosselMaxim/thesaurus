@@ -1,6 +1,6 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input, ViewChild} from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
 import {Training} from '../../../../interfaces/training';
-import {MatDialog} from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-training-item',
@@ -8,18 +8,8 @@ import {MatDialog} from '@angular/material/dialog';
   styleUrls: ['./training-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TrainingItemComponent implements OnInit {
-  @ViewChild('dialogRef') dialogRef: any;
+export class TrainingItemComponent {
 
   @Input() training: Training;
-
-  constructor(public dialog: MatDialog) { }
-
-  ngOnInit(): void {
-  }
-
-  openDialog() {
-    this.dialog.open(this.dialogRef, {maxWidth: '90%'});
-  }
 
 }

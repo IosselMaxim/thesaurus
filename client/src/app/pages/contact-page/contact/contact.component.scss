@@ -1,7 +1,7 @@
 @import "mixins";
 
 .contacts {
-  @include simple-page(0);
+  @include simple-page(8px);
   .telephones {
     font-weight: 500;
     & > p {

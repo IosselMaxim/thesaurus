@@ -67,7 +67,7 @@
             </div>
 
             <div class="sum">Стоимость тренинга для корпоративных Клиентов составляет <strong>{{training?.cost?.company?.sum}}</strong> рублей</div>
-            <button class="req-button">ПОДАТЬ ЗАЯВКУ</button>
+            <button class="req-button" (click)="applyRef.openDialog()">ПОДАТЬ ЗАЯВКУ</button>
 
             <div class="info">
               <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
@@ -86,7 +86,7 @@
             </div>
 
             <div class="sum">Стоимость участия в тренинге для частных лиц составляет <strong>{{training?.cost?.people?.sum}}</strong> рублей</div>
-            <button class="req-button">ЗАПИСАТЬСЯ</button>
+            <button class="req-button" (click)="applyRef.openDialog()">ЗАПИСАТЬСЯ</button>
 
             <div class="info">
               <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
@@ -103,3 +103,4 @@
 
 </div>
 
+<app-apply #applyRef></app-apply>
