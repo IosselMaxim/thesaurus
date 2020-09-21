@@ -15,5 +15,8 @@ export class ApplyComponent {
   openDialog() {
     this.dialog.open(this.dialogRef, {maxWidth: '90%'});
   }
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 
 }

@@ -33,6 +33,7 @@
     <mat-nav-list class="nav-list" >
       <div class="pt-4">
         <a mat-list-item
+           (click)="drawer.toggle()"
            *ngFor="let link of menu"
            [routerLink]="[link.url]" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: link.exact }"
         >

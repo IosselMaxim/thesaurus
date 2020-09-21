@@ -5,14 +5,18 @@ import {CustomerLogosComponent} from './customer-logos/customer-logos.component'
 import {FooterComponent} from '../footer/footer.component';
 import {RouterModule} from '@angular/router';
 import { ApplyComponent } from './apply/apply.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
   declarations: [TitleComponent, CustomerLogosComponent, FooterComponent, ApplyComponent],
-    imports: [
-        CommonModule,
-        RouterModule
-    ],
+  imports: [
+    CommonModule,
+    RouterModule,
+    MatButtonModule,
+    MatIconModule
+  ],
   exports: [TitleComponent, FooterComponent, CustomerLogosComponent, ApplyComponent]
 })
 export class SharedModule {

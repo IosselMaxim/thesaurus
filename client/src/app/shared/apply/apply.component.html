@@ -1,14 +1,17 @@
 <ng-template #dialogRef>
-  <div class="dialog text-center">
-    <div class="dialog-nav d-flex justify-content-between mb-3">
+
+
+  <div class="dialog text-center d-flex flex-column">
+
+    <div class="dialog-nav d-flex justify-content-between align-items-center mb-3">
       <div class="img">
         <img class="w-auto h-auto" src="/assets/img/logo-short-blue.png" alt="">
       </div>
-
-      <p class="gray">Заявка на тренинг</p>
+<!--      <p class="gray">Заявка на тренинг</p>-->
+      <button mat-icon-button (click)="closeDialog()"><mat-icon>close</mat-icon></button>
     </div>
     <p class="blue">Для того, чтобы оставить заявку на тренинг</p>
-    <a href="mailto:welcome@thesaurus-trainings.ru?subject=Вопрос по по тренингам"><button class="mb-3">НАПИШИТЕ НАМ</button></a>
+    <a href="mailto:welcome@thesaurus-trainings.ru?subject=Вопрос по по тренингам"><button class="button mb-3">НАПИШИТЕ НАМ</button></a>
     <p class="blue">по адресу:</p>
     <p class="blue pb-3">welcome@thesaurus-trainings.ru</p>
     <p class="gray pb-1">В письме укажите, какой тренинг Вас интересует, и как с Вами будет удобно связаться.</p>

@@ -1,6 +1,9 @@
 @import "mixins";
 @import "variables";
 
+mat-dialog-container {
+  cursor: default;
+}
 
 .dialog {
   img {
@@ -30,7 +33,7 @@
     }
   }
 
-  button, .button {
+  .button {
     @include button(189px, 37px, $black, 7px, 11px, 500, $orange);
     border-color: $orange;
     transition: 0.2s ease-out;
