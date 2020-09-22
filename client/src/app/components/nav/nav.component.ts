@@ -1,5 +1,5 @@
 import {AfterViewInit, ChangeDetectionStrategy, Component, ViewChild} from '@angular/core';
-import {MENU} from '../../../../app-assets/constants/menu';
+import {MENU} from '../../../app-assets/constants/menu';
 import {NavigationEnd, Router} from '@angular/router';
 import {map} from 'rxjs/operators';
 import {fromEvent} from 'rxjs';

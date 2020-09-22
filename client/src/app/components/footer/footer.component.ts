@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import {MENU} from '../../app-assets/constants/menu';
+import {MENU} from '../../../app-assets/constants/menu';
 
 @Component({
   selector: 'app-footer',

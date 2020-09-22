@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {NavComponent} from './core/components/nav/nav.component';
+import {NavComponent} from './components/nav/nav.component';
 import {SharedModule} from './shared/shared.module';
 import {TitleService} from './services/title.service';
 import {MatSidenavModule} from '@angular/material/sidenav';
