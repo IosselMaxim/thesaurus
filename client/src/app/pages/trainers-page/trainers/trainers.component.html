@@ -5,7 +5,7 @@
       <div class="trainer d-flex flex-sm-row flex-column" *ngFor="let trainer of trainers">
 
         <div class="trainer__img col-8 col-sm-5">
-          <img class="p-0 mb-3 pr-sm-3" src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
+          <img class="p-0 mb-3 pr-sm-3" src="/assets/img/main/trainers/{{trainer?.img}}.png" alt="">
         </div>
 
 
@@ -24,15 +24,15 @@
 
           <div class="experience-detail d-none d-sm-block">
             <p>
-              <img src="../../../../assets/img/main/trainers/icons/1-orange.png" alt="">
+              <img src="/assets/img/main/trainers/icons/1-orange.png" alt="">
               <span>Провел{{ trainer?.isMan ? '' : 'а'}} более {{trainer?.experienceDetail?.trainingsSum}} различных тренингов</span>
             </p>
             <p>
-              <img src="../../../../assets/img/main/trainers/icons/2-orange.png" alt="">
+              <img src="/assets/img/main/trainers/icons/2-orange.png" alt="">
               <span>Обучил{{ trainer?.isMan ? '' : 'а'}} на тренингах более {{trainer?.experienceDetail?.studentsSum}} человек</span>
             </p>
             <p>
-              <img src="../../../../assets/img/main/trainers/icons/3-orange.png" alt="">
+              <img src="/assets/img/main/trainers/icons/3-orange.png" alt="">
               <span>Отработал{{ trainer?.isMan ? '' : 'а'}} более {{trainer?.experienceDetail?.hours}} тренинговых часов</span>
             </p>
           </div>
