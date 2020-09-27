@@ -66,7 +66,7 @@
     min-width: 100%;
     width: $max-width-container;
     height: $height-main-nav;
-    background-image: url('/assets/img/main/main-title-background.png'); /* Путь к фоновому изображению */
+    background-image: url('/assets/img/main/main-title-background.svg'); /* Путь к фоновому изображению */
     background-color: #35281b; /* Цвет фона */
     background-position: top;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@
       min-width: 100%;
       width: $max-width-container;
       height: $height-main-nav-middle;
-      background-image: url('/assets/img/main/main-title-background-middle.png'); /* Путь к фоновому изображению */
+      background-image: url('/assets/img/main/main-title-background-middle.svg'); /* Путь к фоновому изображению */
       background-position: left top;
       background-repeat: no-repeat;
       background-size: auto;
