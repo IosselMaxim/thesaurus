@@ -8,17 +8,17 @@ export interface Training {
     img: 'management' | 'b2b' | 'b2c' | 't&d' | any;
   };
   description: string[];
-  preview: string[];
-  text: string[];
+  preview: string;
+  text: string;
   info: {
     online: boolean;
     format: string;
     duration: string;
 
-    date: {
-      from: string;
-      to: string;
-    };
+    // date: {
+    //   from: string;
+    //   to: string;
+    // };
   };
   cost: {
     company?: CostItem;
@@ -30,5 +30,5 @@ export interface Training {
 export interface CostItem {
   consistTitle: string;
   consist: string[];
-  sum: number;
+  sum: number | string;
 }
