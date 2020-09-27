@@ -19,28 +19,28 @@
 </div>
 
 
-<!--<div class="main container p-3">-->
+<div class="main container p-3">
 
-<!--  <div class="trainings d-flex flex-column flex-md-row">-->
-<!--    <div class="item col-12 col-md-4" *ngFor="let i of trainings">-->
-<!--      <div class="title">{{i.title}}</div>-->
-<!--      <div class="img flip">-->
-<!--        <div class="front m-auto col-12 col-sm-8 col-md-12 p-0" [style.background-image]="'url(/assets/img/main/' + i.img + '.png)'"></div>-->
-<!--        <div class="back m-auto col-12 col-sm-8 col-md-12 p-0">-->
-<!--          <h4>Здесь можно что то написать</h4>-->
-<!--          <div class="nav-nav d-flex">-->
-<!--            <div class="title">-->
-<!--              <button routerLink="/trainings">ВСЕ ТРЕНИНГИ</button>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
+  <div class="trainings d-flex flex-column flex-md-row">
+    <div class="item col-12 col-md-4" *ngFor="let i of trainings">
+      <div class="title">{{i.title}}</div>
+      <div class="img flip">
+        <div class="front m-auto col-12 col-sm-8 col-md-12 p-0" [style.background-image]="'url(/assets/img/main/' + i.img + '.png)'"></div>
+        <div class="back m-auto col-12 col-sm-8 col-md-12 p-0">
+          <h4>Здесь можно что то написать</h4>
+          <div class="nav-nav d-flex">
+            <div class="title">
+              <button routerLink="/trainings">ВСЕ ТРЕНИНГИ</button>
+            </div>
+          </div>
+        </div>
 
-<!--        </div>-->
-<!--      <div class="trainings-list d-none d-md-block" *ngFor="let tr of i.trainingsList">-->
-<!--        <div class="training-text">Тренинг</div>-->
-<!--        <div class="training-name"><a [routerLink]="'/trainings/' + tr._id">{{tr.subTitle}}</a></div>-->
-<!--        <div class="link"></div>-->
-<!--      </div>-->
+        </div>
+      <div class="trainings-list d-none d-md-block" *ngFor="let tr of i.trainingsList">
+        <div class="training-text">Тренинг</div>
+        <div class="training-name"><a [routerLink]="'/trainings/' + tr._id">{{tr.subTitle}}</a></div>
+        <div class="link"></div>
+      </div>
 <!--    </div>-->
 <!--  </div>-->
 <!--  <div class="link"></div>-->
