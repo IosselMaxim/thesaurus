@@ -19,4 +19,6 @@ export interface Trainer {
   text: string[];
   upperEducation: string[];
   education: string[];
+  clientsText: string;
+  clients: string[];
 }

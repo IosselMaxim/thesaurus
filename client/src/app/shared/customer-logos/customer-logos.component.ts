@@ -1,4 +1,4 @@
-import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
+import {Component, ChangeDetectionStrategy, Input} from '@angular/core';
 
 @Component({
   selector: 'app-customer-logos',
@@ -6,12 +6,7 @@ import {Component, OnInit, ChangeDetectionStrategy, Input} from '@angular/core';
   styleUrls: ['./customer-logos.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CustomerLogosComponent implements OnInit {
+export class CustomerLogosComponent {
   @Input() clients = [];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Input() imageWidth = 13;
 }

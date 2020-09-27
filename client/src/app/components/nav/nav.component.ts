@@ -20,12 +20,8 @@ export class NavComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.mdtRef = document.getElementsByTagName('mat-drawer-content')[0];
-    fromEvent(this.mdtRef, 'scroll').subscribe(v => console.log(v));
     // @ts-ignore
     this.scroll = fromEvent(this.mdtRef, 'scroll').pipe(map((r: Event ) => r.target.scrollTop));
-    console.log('this.mdtRef', this.mdtRef);
-    console.log('this.drawerRef', this.drawerRef);
-
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {

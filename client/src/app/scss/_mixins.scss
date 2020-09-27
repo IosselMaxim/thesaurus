@@ -2,6 +2,7 @@
 @import "mixins/simple-page";
 @import "mixins/shared-mixins";
 @import "mixins/buttons";
+@import "mixins/flip";
 
 
 @mixin main($c: $main-color) {

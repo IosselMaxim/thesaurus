@@ -1,6 +1,8 @@
-<div class="main">
-  <div class="text text-center">Мы ценим наших Клиентов и гордимся сотрудничеством с ними:</div>
+<div class="main" *ngIf="clients.length">
+  <div class="text text-center">
+    <ng-content></ng-content>
+  </div>
   <div class="clients d-flex align-items-center justify-content-around flex-wrap p-4">
-    <img class="m-2" *ngFor="let client of clients" src="/assets/img/main/clients/{{client}}.png" alt="">
+    <img [style.min-width.%]="imageWidth" class="m-2" *ngFor="let client of clients" src="/assets/img/clients/{{client}}.svg" alt="">
   </div>
 </div>
