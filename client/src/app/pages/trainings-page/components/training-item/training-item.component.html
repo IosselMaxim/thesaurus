@@ -19,14 +19,11 @@
           <p *ngFor="let des of training?.description">{{des}}</p>
         </div>
       </div>
-      <div class="preview">
-        <p *ngFor="let p of training?.preview">{{ p }}</p>
-
-      </div>
+      <div class="preview" [innerHTML]="training?.preview"></div>
     </div>
 
     <div class="col-lg-3 col-6 action">
-      <img src="../../../../assets/img/pages-img/trainings/{{training?.audience?.img}}.png" alt="">
+      <img src="/assets/img/pages-img/trainings/{{training?.audience?.img}}.png" alt="">
       <div class="text-item">{{training?.audience.text}}</div>
       <div class="text-item">{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</div>
       <div class="text-item" *ngIf="training?.cost?.company">Для Компаний</div>

@@ -526,7 +526,5 @@ export const TRAININGS: Training[] = [
         },
     }
   }
-
-
 ];
 
