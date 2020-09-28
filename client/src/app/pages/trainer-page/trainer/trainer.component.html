@@ -1,7 +1,7 @@
 <div class="container">
   <div class="main p-2">
     <div class="back d-flex justify-content-start align-items-center" routerLink="/trainers">
-      <img src="../../../../assets/img/icon/arrow-left.png" alt="">
+      <img src="/assets/img/icon/arrow-left.png" alt="">
       <span>Назад к списку тренеров</span>
     </div>
     <div class="trainers">
@@ -9,7 +9,7 @@
       <div class="trainer d-flex flex-column flex-sm-row">
 
         <div class="img col-sm-4 col-8 mx-auto mb-4">
-          <img class="p-0 pr-sm-5" src="../../../../assets/img/main/trainers/{{trainer?.img}}.png" alt="">
+          <img class="p-0 pr-sm-5" src="/assets/img/main/trainers/{{trainer?.img}}.jpg" alt="">
         </div>
 
         <div class="info col-sm-8">
@@ -54,19 +54,13 @@
     </div>
 
     <div class="education">
-      <div class="title">Высшее образование::</div>
+      <div class="title">Высшее образование:</div>
       <ul>
         <li *ngFor="let i of trainer?.education">
           {{i}}
         </li>
       </ul>
     </div>
-
-    <div class="education">
-      <div class="title">Лично обучала сотрудников Компаний:</div>
-    </div>
-
-    <div class="clients"></div>
   </div>
 
   <app-customer-logos [clients]="trainer?.clients">{{trainer?.clientsText}}</app-customer-logos>

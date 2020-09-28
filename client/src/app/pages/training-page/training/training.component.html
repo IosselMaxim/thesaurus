@@ -4,12 +4,12 @@
 
       <div class="img-and-menu col-12 col-lg-3 d-flex d-lg-block flex-lg-column">
 
-        <div class="img col-6 col-lg-12 pl-0"><img src="/assets/img/pages-img/trainings/{{training?.img}}.png" alt=""></div>
+        <div class="img col-6 col-lg-12 pl-0"><img src="/assets/img/pages-img/trainings/{{training?.img}}.jpg" alt=""></div>
 
         <div class="menu col-6 col-lg-12">
 
           <div class="d-lg-none d-lg-none">
-            <img src="/assets/img/pages-img/training/{{training?.audience?.img}}.png" alt="">
+            <img src="/assets/img/pages-img/trainings/{{training?.audience?.img}}.png" alt="">
             <ul>
               <li><span class="mb-2">{{training?.audience?.text}}</span></li>
               <li><span>{{training?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</span></li>
@@ -19,7 +19,7 @@
           </div>
           <div class="d-none d-lg-block">
             <button class="button-icon">
-              <img src="../../../../assets/img/pages-img/training/{{training?.audience?.img}}.png" alt="">
+              <img src="/assets/img/pages-img/trainings/{{training?.audience?.img}}.png" alt="">
               <span>{{training?.audience?.text}}</span>
             </button>
             <button class="">
@@ -53,7 +53,7 @@
 
         <div class="cost">
           <div class="title">
-            <img src="../../../../assets/img/pages-img/training/rub.png" alt="">
+            <img src="/assets/img/pages-img/training/rub.png" alt="">
             <span>Стоимость тренинга</span>
           </div>
 
@@ -66,7 +66,7 @@
               </ul>
             </div>
 
-            <div class="sum">Стоимость тренинга для корпоративных Клиентов составляет <strong>{{training?.cost?.company?.sum}}</strong> рублей</div>
+            <div class="sum">Стоимость тренинга для корпоративных Клиентов составляет: <strong>{{training?.cost?.company?.sum}}</strong></div>
             <button class="req-button" (click)="applyRef.openDialog()">ПОДАТЬ ЗАЯВКУ</button>
 
             <div class="info">
@@ -85,7 +85,7 @@
               </ul>
             </div>
 
-            <div class="sum">Стоимость участия в тренинге для частных лиц составляет <strong>{{training?.cost?.people?.sum}}</strong> рублей</div>
+            <div class="sum">Стоимость участия в тренинге для частных лиц составляет: <strong>{{training?.cost?.people?.sum}}</strong></div>
             <button class="req-button" (click)="applyRef.openDialog()">ЗАПИСАТЬСЯ</button>
 
             <div class="info">

@@ -5,7 +5,7 @@
 
   <div class="d-flex">
     <div class="col-lg-3 col-6">
-      <img src="../../../../assets/img/pages-img/trainings/{{training?.img}}.png" alt="">
+      <img src="/assets/img/pages-img/trainings/{{training?.img}}.jpg" alt="">
     </div>
 
     <div class="col-lg-6 d-none d-lg-block">
@@ -19,7 +19,7 @@
           <p *ngFor="let des of training?.description">{{des}}</p>
         </div>
       </div>
-      <div class="preview" [innerHTML]="training?.preview"></div>
+      <div class="preview mt-0" [innerHTML]="training?.preview"></div>
     </div>
 
     <div class="col-lg-3 col-6 action">
