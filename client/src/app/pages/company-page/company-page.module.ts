@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { CompanyPageRoutingModule } from './company-page-routing.module';
-import { CompanyComponent } from './company/company.component';
+import {CompanyPageRoutingModule} from './company-page-routing.module';
+import {CompanyComponent} from './company/company.component';
 import {SharedModule} from '../../shared/shared.module';
 
 
@@ -14,4 +14,6 @@ import {SharedModule} from '../../shared/shared.module';
     SharedModule
   ]
 })
-export class CompanyPageModule { }
+export class CompanyPageModule {
+}
+

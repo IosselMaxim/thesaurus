@@ -20,10 +20,18 @@
         <p>г. Москва, 2-я Звенигородская улица, 12 строение 6</p>
         <p>Санция метро “Улица 1905 года”</p>
       </div>
-      <div class="d-none d-sm-block">
-        <img class="w-100 h-auto" src="/assets/img/pages-img/contacts/map.png" alt="">
+      <div class="d-block">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15" [title]="'asdfasdfasdf'">
+          <agm-marker [latitude]="lat" [longitude]="lng">
+            <agm-info-window>
+              <p>г. Москва, 2-я Звенигородская улица, 12 строение 6</p>
+              <p>Санция метро “Улица 1905 года”</p>
+            </agm-info-window>
+          </agm-marker>
+        </agm-map>
       </div>
     </div>
   </div>
 
 </div>
+
