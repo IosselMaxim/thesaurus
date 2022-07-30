@@ -3,7 +3,6 @@ const app = express();
 const compression = require('compression');
 const bodyParser = require('body-parser');
 const path = require('path');
-const mongoose = require('mongoose');
 const config = require('config');
 
 const cors = require('cors');
@@ -24,4 +23,4 @@ app.use(express.static(path.join(__dirname)));
 
 
 
-module.exports = {app, path, express, mongoose, config}
+module.exports = {app, path, express, config}
