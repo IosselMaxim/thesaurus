@@ -1,6 +1,6 @@
 const {app, path, express} = require('./app');
 
-const PORT = 8888;
+const PORT = 80;
 const STATIC_FOLDER = path.join(__dirname, 'client', 'dist', 'client');
 const INDEX_HTML = path.resolve(__dirname, 'client', 'dist', 'client', 'index.html');
 
