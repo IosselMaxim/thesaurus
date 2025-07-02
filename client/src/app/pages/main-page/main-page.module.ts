@@ -7,7 +7,7 @@ import {MainNavComponent} from './components/main-nav/main-nav.component';
 import {MainTrainingsComponent} from './components/main-trainings/main-trainings.component';
 import {MainMoreComponent} from './components/main-more/main-more.component';
 import {MainClientsComponent} from './components/main-clients/main-clients.component';
-import {MainTrainersComponent} from './components/main-trainers/main-trainers.component';
+import {MainGamesComponent} from './components/main-games/main-games.component';
 import {MainActivitiesComponent} from './components/main-activities/main-activities.component';
 import {MainConsultingComponent} from './components/main-consulting/main-consulting.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -15,6 +15,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {SharedModule} from '../../shared/shared.module';
+import {ParticipationComponent} from './components/participation/participation.component';
 
 
 @NgModule({
@@ -24,9 +25,10 @@ import {SharedModule} from '../../shared/shared.module';
     MainTrainingsComponent,
     MainMoreComponent,
     MainClientsComponent,
-    MainTrainersComponent,
+    MainGamesComponent,
     MainActivitiesComponent,
-    MainConsultingComponent
+    MainConsultingComponent,
+    ParticipationComponent
   ],
   imports: [
     CommonModule,

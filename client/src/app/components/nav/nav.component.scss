@@ -128,7 +128,7 @@ mat-nav-list {
   right: 40px;
   bottom: 20px;
   z-index: 99;
-  background: orange;
+  background: $orange;
   transition: 0.5s;
   @media screen and (max-width: 576px){
     right: 20px;;

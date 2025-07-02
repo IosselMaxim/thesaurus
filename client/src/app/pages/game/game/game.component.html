@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="main my-5">
+    <div class="content d-flex flex-column flex-lg-row">
+
+      <div class="img-and-menu col-12 col-lg-3 d-flex d-lg-block flex-lg-column">
+
+        <div class="img col-6 col-lg-12 pl-0"><img src="/assets/img/main/games/game_{{game?.img}}.png" alt=""></div>
+
+        <div class="menu col-6 col-lg-12">
+
+          <div class="d-lg-none d-lg-none">
+            <img src="/assets/img/main/games/game_{{game?.audience?.img}}.png" alt="">
+            <ul>
+              <li><span class="mb-2">{{game?.audience?.text}}</span></li>
+            </ul>
+          </div>
+          <div class="d-none d-lg-block">
+            <button class="button-icon">
+              <img src="/assets/img/pages-img/trainings/{{game?.audience?.img}}.png" alt="">
+              <span>Для всех сотрудников</span>
+            </button>
+            <button>
+              <span>Бизнес-игра</span>
+            </button>
+            <button>
+              <span>Для Компаний</span>
+            </button>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="text col-12 col-lg-9">
+        <div class="title">{{game?.title}}</div>
+        <div class="sub-title">{{game?.subTitle}}</div>
+        <div class="game-audience">Аудитория тренинга:</div>
+        <div class="description">
+          <p *ngFor="let i of game?.description">{{i}}</p>
+        </div>
+        <div class="text" [innerHTML]="game?.text"></div>
+        <div class="format-duration">
+          <div class="title">Формат проведения тренинга:</div>
+          <div class="format">{{game?.info?.format}}</div>
+          <div class="duration">{{game?.info?.duration}}</div>
+        </div>
+
+        <div class="cost">
+          <div class="title">
+            <img src="/assets/img/pages-img/training/rub.png" alt="">
+            <span>Стоимость бизнес игры</span>
+          </div>
+
+          <div class="company">
+            <div class="company-title">Для Компаний</div>
+            <div class="consistTitle">Свяжитесь с нами для расчета стоимости проведения бизнес-игры согласно выбранному пакету.</div>
+
+            <div class="sum"></div>
+            <button class="req-button" (click)="applyRef.openDialog()">ПОДАТЬ ЗАЯВКУ</button>
+
+            <div class="info">
+              <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
+            </div>
+
+          </div>
+          <div class="people" *ngIf="game?.cost?.people">
+            <div class="company-title">Для частных лиц</div>
+            <div class="consistTitle">{{game?.cost?.people?.consistTitle}}</div>
+            <div class="consist">
+              <ul>
+                <li *ngFor="let cons of game?.cost?.people?.consist">{{cons}}</li>
+              </ul>
+            </div>
+
+            <div class="sum">Стоимость участия в тренинге для частных лиц составляет: <strong>{{game?.cost?.people?.sum}}</strong></div>
+            <button class="req-button" (click)="applyRef.openDialog()">ЗАПИСАТЬСЯ</button>
+
+            <div class="info">
+              <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<app-apply #applyRef></app-apply>

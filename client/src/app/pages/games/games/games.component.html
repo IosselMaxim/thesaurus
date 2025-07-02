@@ -1,0 +1,114 @@
+<div class="container my-container">
+  <div class="col-lg-3 col-6 ">
+    <img class="m-auto" src="/assets/img/logo_2.png" alt="">
+  </div>
+  <div class="right">
+
+    <div class="content">
+      <div class="intro">
+        <div class="question">Что это такое?</div>
+        <div class="title">Бизнес‑игра – это серьезно!</div>
+        <p>Бизнес‑игры являются одним из самых современных и эффективных форматов делового обучения. Это непрерывный
+          игровой процесс для группы участников, который развивается по заданным правилам и позволяет в игровой форме
+          смоделировать наиболее типичные ситуации из реальной практики. В процессе игры участники в увлекательной форме
+          делают необходимые выводы, понимают, как избежать типичных ошибок и формируют правильные модели поведения.</p>
+        <p>Формат бизнес‑игры имеет целый ряд преимуществ:</p>
+      </div>
+      <div class="benefits">
+         <div class="item">
+          <img src="/assets/img/games/1.png" alt="">
+          <p class="text">Увлекательный игровой формат взаимодействия</p>
+        </div>
+         <div class="item">
+          <img src="/assets/img/games/2.png" alt="">
+          <p class="text">Совместные идеи и открытия в процессе игры</p>
+        </div>
+         <div class="item">
+          <img src="/assets/img/games/3.png" alt="">
+          <p class="text">Понятные выводы для применения в работе</p>
+        </div>
+         <div class="item">
+          <img src="/assets/img/games/4.png" alt="">
+          <p class="text">Высокая вовлеченность и мотивация участников</p>
+        </div>
+         <div class="item">
+          <img src="/assets/img/games/5.png" alt="">
+          <p class="text">Большое количество сценариев развития событий</p>
+        </div>
+         <div class="item">
+          <img src="/assets/img/games/6.png" alt="">
+          <p class="text">Интересные правила, моделирующие реальные ситуации</p>
+        </div>
+         <div class="item">
+          <img src="/assets/img/games/7.png" alt="">
+          <p class="text">Непосредственная связь с реальной практикой бизнеса</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <ng-container *ngFor="let game of games">
+    <div class="main">
+      <div  class="d-lg-none p-3">
+        <ng-container *ngTemplateOutlet="titleTemplate"></ng-container>
+      </div>
+
+      <div class="d-flex">
+        <div class="col-lg-3 col-6">
+          <img src="/assets/img/main/games/game_{{game?.img}}.png" alt="">
+        </div>
+
+        <div class="col-lg-6 d-none d-lg-block">
+          <ng-container *ngTemplateOutlet="titleTemplate"></ng-container>
+
+          <div class="audience">
+            <div class="training-audience">
+              Аудитория
+            </div>
+            <div class="description">
+              <p *ngFor="let des of game?.description">{{des}}</p>
+            </div>
+          </div>
+          <div class="preview mt-0" [innerHTML]="game?.preview"></div>
+        </div>
+
+        <div class="col-lg-3 col-6 action">
+          <img src="/assets/img/pages-img/trainings/{{game?.audience?.img}}.png" alt="">
+          <div class="text-item">{{game?.audience.text}}</div>
+          <div class="text-item">{{game?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</div>
+
+          <div class="d-none d-sm-block">
+            <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="d-sm-none d-block">
+        <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>
+      </div>
+
+    </div>
+
+
+    <ng-template #titleTemplate>
+      <div class="title">{{game?.title}}</div>
+      <div class="sub-title" [routerLink]="'/games/' + game?._id">{{game?.subTitle}}</div>
+    </ng-template>
+
+    <ng-template #buttonsTemplate>
+      <div class="buttons d-flex flex-column">
+        <button class="button-cost" [routerLink]="'/games/' + game?._id">Узнать подробнее</button>
+        <button class="button-request" (click)="applyRef.openDialog()">ПОДАТЬ ЗАЯВКУ</button>
+      </div>
+    </ng-template>
+
+    <app-apply #applyRef></app-apply>
+
+  </ng-container>
+
+</div>
+

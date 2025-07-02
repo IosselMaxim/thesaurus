@@ -50,11 +50,13 @@
     }
 
     .expertise {
+
+      margin-bottom: 20px;
       font-style: normal;
       font-weight: 200;
       font-size: 13px;
       line-height: 20px;
-      padding: 15px;
+      padding: 15px 15px 15px 0;
       p {
         padding-bottom: 10px;
       }
@@ -70,7 +72,6 @@
     }
 
     .experience-detail {
-      padding: 0 0 0 15px ;
       p {
         padding: 15px 0;
         display: flex;
@@ -92,7 +93,7 @@
     }
 
     .more {
-      padding: 15px;
+      margin-top: 15px!important;
       button {
         @include button(193px, 23px, $orange, 12px, 9px, 500, none);
         font-style: normal;

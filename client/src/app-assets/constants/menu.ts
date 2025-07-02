@@ -18,8 +18,8 @@ export const MENU = [
     disabled: false
   },
   {
-    url: '/trainers',
-    name: 'ТРЕНЕРЫ',
+    url: '/games',
+    name: 'БИЗНЕС ИГРЫ',
     exact: false,
     disabled: false
   },
