@@ -16,6 +16,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {SharedModule} from '../../shared/shared.module';
 import {ParticipationComponent} from './components/participation/participation.component';
+import {GtmModule} from '../../directives/gtm.module';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import {ParticipationComponent} from './components/participation/participation.c
     MatListModule,
     MatSidenavModule,
     MatButtonModule,
+    GtmModule
   ]
 })
 export class MainPageModule {

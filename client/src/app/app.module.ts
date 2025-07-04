@@ -6,12 +6,14 @@ import {AppComponent} from './app.component';
 import {NavComponent} from './components/nav/nav.component';
 import {SharedModule} from './shared/shared.module';
 import {TitleService} from './services/title.service';
+import {GtmService} from './services/gtm.service';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import {GtmModule} from './directives/gtm.module';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatIconModule,
     MatListModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    GtmModule
   ],
-  providers: [TitleService],
+  providers: [TitleService, GtmService],
   exports: [],
   bootstrap: [AppComponent]
 })

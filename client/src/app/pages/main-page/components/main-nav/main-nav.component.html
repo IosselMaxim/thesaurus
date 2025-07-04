@@ -7,7 +7,13 @@
     <div class="text">
       <div class="services">Бизнес-тренинги Корпоративное обучение Открытые мероприятия</div>
       <div class="button-trainings">
-        <button routerLink="/trainings">КАТАЛОГ ТРЕНИНГОВ</button>
+        <button 
+          routerLink="/trainings" 
+          appGtmClick 
+          gtmEventName="cta_click"
+          [gtmEventData]="{button_name: 'Каталог тренингов', category: 'main_cta', location: 'hero_section'}">
+          КАТАЛОГ ТРЕНИНГОВ
+        </button>
       </div>
       <div class="motto">Основано на практике. Нацелено на результат.</div>
     </div>
@@ -20,7 +26,11 @@
       <div class="buttons">
         <button *ngFor="let link of menu | slice:1"
                 [routerLink]="link.url"
-        >{{link.name}}</button>
+                appGtmClick
+                gtmEventName="navigation_click"
+                [gtmEventData]="{button_name: link.name, category: 'main_navigation', location: 'top_menu'}">
+          {{link.name}}
+        </button>
       </div>
     </div>
 
