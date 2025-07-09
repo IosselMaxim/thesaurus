@@ -66,7 +66,7 @@
 
           <div class="audience">
             <div class="training-audience">
-              Аудитория
+              Для кого предназначена:
             </div>
             <div class="description">
               <p *ngFor="let des of game?.description">{{des}}</p>
@@ -78,7 +78,7 @@
         <div class="col-lg-3 col-6 action">
           <img src="/assets/img/pages-img/trainings/{{game?.audience?.img}}.png" alt="">
           <div class="text-item">{{game?.audience.text}}</div>
-          <div class="text-item">{{game?.info?.online ? 'Онлайн обучение' : 'Очный тренинг'}}</div>
+          <div class="text-item">{{game?.info?.online ? 'Онлайн обучение' : 'Бизнес-игра'}}</div>
 
           <div class="d-none d-sm-block">
             <ng-container *ngTemplateOutlet="buttonsTemplate"></ng-container>

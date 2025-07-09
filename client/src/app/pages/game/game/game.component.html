@@ -34,13 +34,13 @@
       <div class="text col-12 col-lg-9">
         <div class="title">{{game?.title}}</div>
         <div class="sub-title">{{game?.subTitle}}</div>
-        <div class="game-audience">Аудитория тренинга:</div>
+        <div class="game-audience">Для кого предназначена:</div>
         <div class="description">
           <p *ngFor="let i of game?.description">{{i}}</p>
         </div>
         <div class="text" [innerHTML]="game?.text"></div>
         <div class="format-duration">
-          <div class="title">Формат проведения тренинга:</div>
+          <div class="title"></div>
           <div class="format">{{game?.info?.format}}</div>
           <div class="duration">{{game?.info?.duration}}</div>
         </div>
@@ -59,7 +59,7 @@
             <button class="req-button" (click)="applyRef.openDialog()">ПОДАТЬ ЗАЯВКУ</button>
 
             <div class="info">
-              <p>После подачи заявки в течение дня с Вами свяжется наш консультант и обсудит все детали.</p>
+              <p>После подачи заявки с Вами свяжется наш консультант и обсудит все детали.</p>
             </div>
 
           </div>

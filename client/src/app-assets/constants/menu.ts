@@ -19,7 +19,7 @@ export const MENU = [
   },
   {
     url: '/games',
-    name: 'БИЗНЕС ИГРЫ',
+    name: 'БИЗНЕС-ИГРЫ',
     exact: false,
     disabled: false
   },
