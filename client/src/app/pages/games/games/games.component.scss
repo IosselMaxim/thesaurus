@@ -9,6 +9,9 @@
 }
 
 .container {
+  @media screen and (max-width: 576px){
+    display: block;
+  }
 
   .question {
     font-size: 14px;
@@ -25,31 +28,49 @@
 
   color: #17375E;
 
+  .left {
+    @media screen and (max-width: 576px){
+      margin: auto;
+      max-width: 100%;
+    }
+  }
+
   .right {
-    padding-left: 20px;
+    padding: 24px;
     width: 70%;
     border-left: 2px solid #C4C4C4;
+    line-height: 21px;
 
     .item {
       display: flex;
       padding-left: 20px;
-        img {
-          width: 27px;
-          height: 27px;
-          margin-right: 20px;
-        }
-        p {
-          font-size: 13px;
-          line-height: 21px;
-          padding: 10px 0;
-        }
+      align-items: center;
+
+      img {
+        width: 27px;
+        height: 27px;
+        margin-right: 20px;
       }
+
+      p {
+        font-size: 13px;
+        line-height: 21px;
+        padding: 10px 0;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding-left: 0;
+        padding-right: 40px;
+      }
+    }
+
+    @media screen and (max-width: 576px){
+        width: 100%;
+        border-left: none;
+      padding: 20px;
+    }
   }
 }
-
-
-@import "mixins";
-@import "variables";
 
 .main {
   color: $main-color;
@@ -106,14 +127,28 @@
     font-size: 11px;
     line-height: 13px;
 
+    @media screen and (max-width: 1200px){
+      display: block;
+    }
+
     img {
       position: absolute;
       left: 0;
       top: 0;
+      width: 40px;
+
+      @media screen and (max-width: 1200px){
+        position: relative;
+        margin-left: 10px;
+        width: 30px;
+      }
     }
 
     .text-item {
       padding: 10px 0 0 30px;
+      @media screen and (max-width: 1200px){
+        padding-left: 10px;
+      }
     }
 
     .buttons {
